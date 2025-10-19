@@ -1,0 +1,1463 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>C Tutorial &#8212; Software Project&lt;br&gt;0368-2161</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1TDSNPLTY6"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-1TDSNPLTY6');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-1TDSNPLTY6');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'C_tutorial';</script>
+    <script src="_static/custom_analytics.js?v=2edf7fbc"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Strings" href="strings.html" />
+    <link rel="prev" title="Arrays + Pointers" href="arrays_pointers.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Software Project<br>0368-2161</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Development_Environment.html">Development Environment</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Python_review.html">Python Review</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Introduction_to_C.html">Introduction to C</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arrays_pointers.html">Arrays + Pointers</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">C Tutorial</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="strings.html">Strings</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="dynamicMemory.html">Dynamic memory allocation</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="structures.html">Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkedLists.html">Linked Lists</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="preprocessor.html">The Preprocessor</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Files.html">Files</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Bitwise_Operators.html">Bitwise Operators</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="C_Python_API.html">C Python API</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pandas.html">Pandas</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="scikit_learn.html">Machine Learning</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="large_scale.html">Large Scale</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="c_exam.html">C Exam Questions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/TauInnov/book/master/v2/gh/raminass/Software-Project/main?urlpath=tree/C_tutorial.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/raminass/Software-Project/blob/main/C_tutorial.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/raminass/Software-Project" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/raminass/Software-Project/issues/new?title=Issue%20on%20page%20%2FC_tutorial.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/C_tutorial.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>C Tutorial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">C Tutorial</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling">Compiling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-using-cmd">Manual using CMD</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-program">1.Running the program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-the-c-program">2.Compile the C program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-gdb">3.Launch gdb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-a-break-points-inside-c-program">4.Set up a break points inside C program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-c-program-in-gdb-debugger">5.Run the C program in gdb debugger</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-the-variable-values-inside-gdb-debugger">6.Printing the variable values inside gdb debugger</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-code-attempt-1">Fixing the Code, attempt 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-first-attempt-of-fixing">Checking first attempt of fixing:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continue-stepping-over-in-gdb-commands">7. Continue, stepping over/in – gdb commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-code-attempt-2">Fixing the code, attempt 2</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gdb-command-shortcuts">gdb command shortcuts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ide-debugging">IDE Debugging</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#memory">Memory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addresses-pointers">Addresses, pointers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-arrays">Strings, Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pointer-arithmetic">Pointer arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valgrind">Valgrind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segmentation-fault">Segmentation Fault</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-arguments">Command-line arguments</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atoi">atoi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#read-data">Read Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hw1">HW1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fun-topic">Fun Topic</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-imprecision">Memory imprecision</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="c-tutorial">
+<h1>C Tutorial<a class="headerlink" href="#c-tutorial" title="Link to this heading">#</a></h1>
+<p><strong>Author</strong>: Rami Nasser (raminass&#64;gmail.com)</p>
+<p>This notebook, reviews important topics in C with examples.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="compiling">
+<h1>Compiling<a class="headerlink" href="#compiling" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Computers only understand binary, which is also used to
+represent instructions like printing something to the screen. Our source code has been written in characters we can read, but it needs to be compiled: converted to machine code, patterns of zeros and ones that our computer can directly understand.</p></li>
+<li><p>A program called a <strong>compiler</strong> will take source code as input and produce machine code as output. This program is <strong>gcc</strong>.</p></li>
+<li><p>To run our program, we’ll type in another command, ./hello, which looks in the current folder ‘.’ for a program called hello, and runs it.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, world&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>hello.c
+</pre></div>
+</div>
+<p>This will give executable file called a.out.
+We can change the name of the exec file, usin -o option:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>hello.c<span class="w"> </span>-o<span class="w"> </span>hello_world
+</pre></div>
+</div>
+<p>In order to view the assembly code in human readable way:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>–S<span class="w"> </span>hello.c
+</pre></div>
+</div>
+<p>This will give a file with type *.s that is a readable Assembly code.</p>
+<div class="highlight-Assembly notranslate"><div class="highlight"><pre><span></span>    	.file	&quot;hello.c&quot;
+	.section	.rodata
+.LC0:
+	.string	&quot;hello, world&quot;
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$.LC0, %edi
+	movl	$0, %eax
+	call	printf
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	&quot;GCC: (Ubuntu 4.8.2-19ubuntu1) 4.8.2&quot;
+	.section	.note.GNU-stack,&quot;&quot;,@progbits
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="debugging">
+<h1>Debugging<a class="headerlink" href="#debugging" title="Link to this heading">#</a></h1>
+<section id="manual-using-cmd">
+<h2>Manual using CMD<a class="headerlink" href="#manual-using-cmd" title="Link to this heading">#</a></h2>
+<p>Simple factorial program, that has some bugs.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter the number: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">num</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">*</span><span class="n">i</span><span class="p">;</span><span class="w">    </span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The factorial of %d is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">num</span><span class="p">,</span><span class="n">j</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="running-the-program">
+<h3>1.Running the program<a class="headerlink" href="#running-the-program" title="Link to this heading">#</a></h3>
+<p>Let’s test the program for example with input = 3</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>factorial.c
+./a.out
+Enter<span class="w"> </span>the<span class="w"> </span>number:<span class="w"> </span><span class="m">3</span>
+The<span class="w"> </span>factorial<span class="w"> </span>of<span class="w"> </span><span class="m">3</span><span class="w"> </span>is<span class="w"> </span><span class="m">65534</span>
+</pre></div>
+</div>
+<p>The output is incorrect as we expect the answer to be 6 for input=3.
+Let’s find the bug and fix the program.
+Next are the steps for debugging C program manually using CMD.</p>
+</section>
+<section id="compile-the-c-program">
+<h3>2.Compile the C program<a class="headerlink" href="#compile-the-c-program" title="Link to this heading">#</a></h3>
+<p>With regular compiler by adding debugging option -g</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>-g<span class="w"> </span>factorial.c<span class="w"> </span>-o<span class="w"> </span>factorial
+</pre></div>
+</div>
+</section>
+<section id="launch-gdb">
+<h3>3.Launch gdb<a class="headerlink" href="#launch-gdb" title="Link to this heading">#</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gdb<span class="w"> </span>factorial
+<span class="o">(</span>gdb<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="set-up-a-break-points-inside-c-program">
+<h3>4.Set up a break points inside C program<a class="headerlink" href="#set-up-a-break-points-inside-c-program" title="Link to this heading">#</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span><span class="k">break</span><span class="w"> </span><span class="m">10</span>
+Breakpoint<span class="w"> </span><span class="m">1</span><span class="w"> </span>at<span class="w"> </span>0x763:<span class="w"> </span>file<span class="w"> </span>factorial.c,<span class="w"> </span>line<span class="w"> </span><span class="m">10</span>.
+</pre></div>
+</div>
+</section>
+<section id="run-the-c-program-in-gdb-debugger">
+<h3>5.Run the C program in gdb debugger<a class="headerlink" href="#run-the-c-program-in-gdb-debugger" title="Link to this heading">#</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span>run<span class="w"> </span><span class="o">[</span>args<span class="o">]</span>
+Starting<span class="w"> </span>program:<span class="w"> </span>.../factorial
+Enter<span class="w"> </span>the<span class="w"> </span>number:<span class="w"> </span><span class="m">3</span>
+</pre></div>
+</div>
+<p>Once you executed the C program, it would execute until the first break point, and give you the prompt for debugging.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Breakpoint<span class="w"> </span><span class="m">1</span>,<span class="w"> </span>main<span class="w"> </span><span class="o">()</span><span class="w"> </span>at<span class="w"> </span>factorial.c:10
+<span class="m">10</span><span class="w">                      </span><span class="nv">j</span><span class="o">=</span>j*i<span class="p">;</span><span class="w">    </span>
+</pre></div>
+</div>
+</section>
+<section id="printing-the-variable-values-inside-gdb-debugger">
+<h3>6.Printing the variable values inside gdb debugger<a class="headerlink" href="#printing-the-variable-values-inside-gdb-debugger" title="Link to this heading">#</a></h3>
+<p>Now we can use various gdb commands to debug the C program as explained in the sections below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span>print<span class="w"> </span>i
+<span class="w">  </span><span class="nv">$1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span>print<span class="w"> </span>j
+<span class="w">  </span><span class="nv">$2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">32767</span>
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="o">(</span>gdb<span class="o">)</span><span class="w"> </span>print<span class="w"> </span>num
+<span class="w">  </span><span class="nv">$3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
+</pre></div>
+</div>
+<p>As you see above, in the factorial.c, we have not initialized the variable j. So, it gets garbage value resulting in a big numbers as factorial values.</p>
+<p>Fix this issue by initializing variable j with 1, compile the C program and execute it again.</p>
+<p>Even after this fix there seems to be some problem in the factorial.c program, as it still gives wrong factorial value.</p>
+<p>So, place the break point in 10th line, and continue as explained in the next section.</p>
+<section id="fixing-the-code-attempt-1">
+<h4>Fixing the Code, attempt 1<a class="headerlink" href="#fixing-the-code-attempt-1" title="Link to this heading">#</a></h4>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#</span><span class="w"> </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// initialized j</span>
+<span class="w">	</span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Enter the number: &quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="n">scanf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">num</span><span class="w"> </span><span class="p">);</span>
+
+<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">		</span><span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">*</span><span class="n">i</span><span class="p">;</span><span class="w">    </span>
+
+<span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The factorial of %d is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">num</span><span class="p">,</span><span class="n">j</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="checking-first-attempt-of-fixing">
+<h4>Checking first attempt of fixing:<a class="headerlink" href="#checking-first-attempt-of-fixing" title="Link to this heading">#</a></h4>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>factorial.c<span class="w"> </span>-o<span class="w"> </span>factorial
+./factorial
+Enter<span class="w"> </span>the<span class="w"> </span>number:<span class="w"> </span><span class="m">3</span>
+The<span class="w"> </span>factorial<span class="w"> </span>of<span class="w"> </span><span class="m">3</span><span class="w"> </span>is<span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="continue-stepping-over-in-gdb-commands">
+<h3>7. Continue, stepping over/in – gdb commands<a class="headerlink" href="#continue-stepping-over-in-gdb-commands" title="Link to this heading">#</a></h3>
+<p>There are three kind of gdb operations you can choose when the program stops at a break point. They are continuing until the next break point, stepping in, or stepping over the next program lines.</p>
+<ul class="simple">
+<li><p>c or continue: Debugger will continue executing until the next break point.</p></li>
+<li><p>n or next: Debugger will execute the next line as single instruction.</p></li>
+<li><p>s or step: Same as next, but does not treats function as a single instruction, instead goes into the function and executes it line by line.</p></li>
+</ul>
+<section id="fixing-the-code-attempt-2">
+<h4>Fixing the code, attempt 2<a class="headerlink" href="#fixing-the-code-attempt-2" title="Link to this heading">#</a></h4>
+<p>By continuing or stepping through you could have found that the issue is because we have not used the &lt;= in the ‘for loop’ condition checking. So changing that from &lt; to &lt;= will solve the issue.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter the number: &quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
+
+<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">=</span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">		</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+
+<span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The factorial of %d is %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="gdb-command-shortcuts">
+<h3>gdb command shortcuts<a class="headerlink" href="#gdb-command-shortcuts" title="Link to this heading">#</a></h3>
+<p>Use following shortcuts for most of the frequent gdb operations.</p>
+<ul class="simple">
+<li><p>l - list</p></li>
+<li><p>p - print</p></li>
+<li><p>c - continue</p></li>
+<li><p>s - step</p></li>
+<li><p>quit - Exit from GDB.</p></li>
+<li><p>ENTER: pressing enter key would execute the previously executed command again.</p></li>
+</ul>
+<p>For more info please refer to:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>man<span class="w"> </span>gdb
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ide-debugging">
+<h2>IDE Debugging<a class="headerlink" href="#ide-debugging" title="Link to this heading">#</a></h2>
+<p>We can graphically debug using ide, in our case VScode:</p>
+<ul class="simple">
+<li><p>click left to the line to place the breakpoints</p></li>
+<li><p>click ‘Start Debugging’</p></li>
+<li><p>use the the top bar with debugging commands</p></li>
+</ul>
+<p>More info: <a class="reference external" href="https://code.visualstudio.com/docs/editor/debugging">VScode Debugging</a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="memory">
+<h1>Memory<a class="headerlink" href="#memory" title="Link to this heading">#</a></h1>
+<section id="addresses-pointers">
+<h2>Addresses, pointers<a class="headerlink" href="#addresses-pointers" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>You have seen in the lectures how to allocate memory for different data structures.</p></li>
+<li><p>Computer’s memory is represented in hexadecimal base, which represents large numeric values with fewer digits needed.</p></li>
+</ul>
+<p><img alt="image.png" src="data:image/png;base64,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" /></p>
+<ul class="simple">
+<li><p>When creating variable n:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><img alt="alt text" src="_images/image-1.png" /></p>
+<ul class="simple">
+<li><p>A pointer is a variable that stores an address in memory, where some other variable might be stored.</p></li>
+<li><p>The &amp; operator can be used to get the address of some variable, as with &amp;n. And the * operator declares a variable as a pointer, as with int *p, indicating that we have a variable called p that points to an int. So, to store the address of a variable n into a pointer p, we would write.</p></li>
+<li><p>With C, we can also go to specific addresses in memory, which might cause segmentation faults, where we’ve tried to read or write to memory we don’t have permission to.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">;</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>0x7ffe86df0bd4
+<span class="m">50</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In memory, we might have one variable, p, with the value of some address, like 0x123, stored, and another variable, an integer with the value 50, at that addresss:</p></li>
+</ul>
+<p><img alt="alt text" src="_images/image-2.png" /></p>
+<ul class="simple">
+<li><p>Notice that p takes up 8 bytes, since in modern computer systems, 64 bits are used in order to address the billions of bytes of memory available. With 32 bits, we can only count up to about 4 billion bytes, or about 4GB of memory.</p></li>
+</ul>
+<p>run the below to see thehow many bits the machine uses to represent addresses:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>uname<span class="w"> </span>-a<span class="w"> </span>
+</pre></div>
+</div>
+</section>
+<section id="strings-arrays">
+<h2>Strings, Arrays<a class="headerlink" href="#strings-arrays" title="Link to this heading">#</a></h2>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HI!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The address of each character in s</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nova<span class="w"> </span><span class="m">45</span>%<span class="w"> </span>gcc<span class="w"> </span>strings.c<span class="w"> </span>-o<span class="w"> </span>strings
+nova<span class="w"> </span><span class="m">46</span>%<span class="w"> </span>./strings
+0x400644
+0x400644
+0x400645
+0x400646
+0x400647
+</pre></div>
+</div>
+<p>The address of the first character, &amp;s[0], is the same as the value of s. And each following character has an address that is one byte higher.</p>
+</section>
+<section id="pointer-arithmetic">
+<h2>Pointer arithmetic<a class="headerlink" href="#pointer-arithmetic" title="Link to this heading">#</a></h2>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HI!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>*s goes to the address stored in s, and *(s + 1) goes to the location in memory with the next character, an address that is one byte higher.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numbers</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">numbers</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">numbers</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">numbers</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">numbers</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">numbers</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">numbers</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">numbers</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>It turns out that we only need to add 1 to the address of numbers, instead of 4 (even though ints are 4 bytes in size), since the compiler already knows that the type of each value in numbers is 4 bytes. With + 1, we’re telling the compiler to move the next value in the array, not the next byte.</p>
+</section>
+<section id="valgrind">
+<h2>Valgrind<a class="headerlink" href="#valgrind" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We use <strong>malloc</strong> to allocate memory, and we use <strong>free</strong> to free the memory so the operating system can do something else with it.</p></li>
+<li><p>Our computers might slow down if a program we’re running has a bug where it allocates more and more memory but never frees it. The operating system will take longer and longer to find enough available memory for our program.</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+<span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">72</span><span class="p">;</span>
+<span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">73</span><span class="p">;</span>
+<span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Compile and run the program:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>memory.c<span class="w"> </span>-o<span class="w"> </span>memory
+./memory<span class="w"> </span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We used malloc to allocate memory for 3 integers.</p></li>
+<li><p>We’ve deliberately made a mistake where we forgot arrays are 0-indexed, and started at x[1] instead. Then, with x[3], we’re trying to access memory beyond the bounds of what we have access to.</p></li>
+<li><p>We also don’t free the memory we’ve allocated.</p></li>
+<li><p>When we compile and run our program, though, nothing seems to happen. It turns out that our mistake wasn’t bad enough to cause a segmentation fault this time, though it might next time.</p></li>
+</ul>
+<p>We will use <strong>valgrind</strong>, a command-line tool that we can use to run our program and see if it has any memory-related issues.</p>
+<p>How ?
+run valgrind followed by the executable of the program as follow:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>-g<span class="w"> </span>memory.c<span class="w"> </span>-o<span class="w"> </span>memory
+valgrind<span class="w"> </span>./memory
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>Memcheck,<span class="w"> </span>a<span class="w"> </span>memory<span class="w"> </span>error<span class="w"> </span><span class="nv">detector</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>Copyright<span class="w"> </span><span class="o">(</span>C<span class="o">)</span><span class="w"> </span><span class="m">2002</span>-2013,<span class="w"> </span>and<span class="w"> </span>GNU<span class="w"> </span>GPL<span class="s1">&#39;d, by Julian Seward et al.</span>
+<span class="s1">==2141== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info</span>
+<span class="s1">==2141== Command: ./a.out</span>
+<span class="s1">==2141== </span>
+<span class="s1">==2141== Invalid write of size 4</span>
+<span class="s1">==2141==    at 0x400567: main (memory.c:9)</span>
+<span class="s1">==2141==  Address 0x51fd04c is 0 bytes after a block of size 12 alloc&#39;</span><span class="nv">d</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">    </span>at<span class="w"> </span>0x4C2AB80:<span class="w"> </span>malloc<span class="w"> </span><span class="o">(</span><span class="k">in</span><span class="w"> </span>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so<span class="o">)</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">    </span>by<span class="w"> </span>0x40053E:<span class="w"> </span>main<span class="w"> </span><span class="o">(</span>memory.c:6<span class="o">)</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>HEAP<span class="w"> </span>SUMMARY:
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>use<span class="w"> </span>at<span class="w"> </span>exit:<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">   </span>total<span class="w"> </span>heap<span class="w"> </span>usage:<span class="w"> </span><span class="m">1</span><span class="w"> </span>allocs,<span class="w"> </span><span class="m">0</span><span class="w"> </span>frees,<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="nv">allocated</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>LEAK<span class="w"> </span>SUMMARY:
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">    </span>definitely<span class="w"> </span>lost:<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">    </span>indirectly<span class="w"> </span>lost:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">      </span>possibly<span class="w"> </span>lost:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">    </span>still<span class="w"> </span>reachable:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w">         </span>suppressed:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>Rerun<span class="w"> </span>with<span class="w"> </span>--leak-check<span class="o">=</span>full<span class="w"> </span>to<span class="w"> </span>see<span class="w"> </span>details<span class="w"> </span>of<span class="w"> </span>leaked<span class="w"> </span><span class="nv">memory</span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>For<span class="w"> </span>counts<span class="w"> </span>of<span class="w"> </span>detected<span class="w"> </span>and<span class="w"> </span>suppressed<span class="w"> </span>errors,<span class="w"> </span>rerun<span class="w"> </span>with:<span class="w"> </span>-v
+<span class="o">==</span><span class="nv">2141</span><span class="o">==</span><span class="w"> </span>ERROR<span class="w"> </span>SUMMARY:<span class="w"> </span><span class="m">1</span><span class="w"> </span>errors<span class="w"> </span>from<span class="w"> </span><span class="m">1</span><span class="w"> </span>contexts<span class="w"> </span><span class="o">(</span>suppressed:<span class="w"> </span><span class="m">0</span><span class="w"> </span>from<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We see some snippets like Invalid write of size 4 at … memory.c:9, which gives us a hint to look at line 9, where we’re using x[3].</p></li>
+<li><p>Another error telling us 12 bytes … are definitely lost, in that we’ve allocated them, but not freed them.</p></li>
+</ul>
+<p>Now fixing both errors</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+<span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">72</span><span class="p">;</span>
+<span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">73</span><span class="p">;</span>
+<span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>%<span class="w"> </span>gcc<span class="w"> </span>-g<span class="w"> </span>memory.c<span class="w"> </span>-o<span class="w"> </span>memory
+%<span class="w"> </span>valgrind<span class="w"> </span>./memory
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>Memcheck,<span class="w"> </span>a<span class="w"> </span>memory<span class="w"> </span>error<span class="w"> </span><span class="nv">detector</span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>Copyright<span class="w"> </span><span class="o">(</span>C<span class="o">)</span><span class="w"> </span><span class="m">2002</span>-2013,<span class="w"> </span>and<span class="w"> </span>GNU<span class="w"> </span>GPL<span class="err">&#39;</span>d,<span class="w"> </span>by<span class="w"> </span>Julian<span class="w"> </span>Seward<span class="w"> </span>et<span class="w"> </span>al.
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>Using<span class="w"> </span>Valgrind-3.10.0.SVN<span class="w"> </span>and<span class="w"> </span>LibVEX<span class="p">;</span><span class="w"> </span>rerun<span class="w"> </span>with<span class="w"> </span>-h<span class="w"> </span><span class="k">for</span><span class="w"> </span>copyright<span class="w"> </span><span class="nv">info</span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>Command:<span class="w"> </span>./memory
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>HEAP<span class="w"> </span>SUMMARY:
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>use<span class="w"> </span>at<span class="w"> </span>exit:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w">   </span>total<span class="w"> </span>heap<span class="w"> </span>usage:<span class="w"> </span><span class="m">1</span><span class="w"> </span>allocs,<span class="w"> </span><span class="m">1</span><span class="w"> </span>frees,<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="nv">allocated</span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>All<span class="w"> </span>heap<span class="w"> </span>blocks<span class="w"> </span>were<span class="w"> </span>freed<span class="w"> </span>--<span class="w"> </span>no<span class="w"> </span>leaks<span class="w"> </span>are<span class="w"> </span><span class="nv">possible</span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>For<span class="w"> </span>counts<span class="w"> </span>of<span class="w"> </span>detected<span class="w"> </span>and<span class="w"> </span>suppressed<span class="w"> </span>errors,<span class="w"> </span>rerun<span class="w"> </span>with:<span class="w"> </span>-v
+<span class="o">==</span><span class="nv">2743</span><span class="o">==</span><span class="w"> </span>ERROR<span class="w"> </span>SUMMARY:<span class="w"> </span><span class="m">0</span><span class="w"> </span>errors<span class="w"> </span>from<span class="w"> </span><span class="m">0</span><span class="w"> </span>contexts<span class="w"> </span><span class="o">(</span>suppressed:<span class="w"> </span><span class="m">0</span><span class="w"> </span>from<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>For more info see:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>man<span class="w"> </span>valgrin
+</pre></div>
+</div>
+<p>In order to view the leaks in details add the –leak-check=full option to valgrind, example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>%<span class="w"> </span>valgrind<span class="w"> </span>--leak-check<span class="o">=</span>full<span class="w"> </span>./memory
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>Memcheck,<span class="w"> </span>a<span class="w"> </span>memory<span class="w"> </span>error<span class="w"> </span><span class="nv">detector</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>Copyright<span class="w"> </span><span class="o">(</span>C<span class="o">)</span><span class="w"> </span><span class="m">2002</span>-2013,<span class="w"> </span>and<span class="w"> </span>GNU<span class="w"> </span>GPL<span class="s1">&#39;d, by Julian Seward et al.</span>
+<span class="s1">==3052== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info</span>
+<span class="s1">==3052== Command: ./memory</span>
+<span class="s1">==3052== </span>
+<span class="s1">==3052== Invalid write of size 4</span>
+<span class="s1">==3052==    at 0x400567: main (memory.c:9)</span>
+<span class="s1">==3052==  Address 0x51fd04c is 0 bytes after a block of size 12 alloc&#39;</span><span class="nv">d</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">    </span>at<span class="w"> </span>0x4C2AB80:<span class="w"> </span>malloc<span class="w"> </span><span class="o">(</span><span class="k">in</span><span class="w"> </span>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so<span class="o">)</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">    </span>by<span class="w"> </span>0x40053E:<span class="w"> </span>main<span class="w"> </span><span class="o">(</span>memory.c:6<span class="o">)</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>HEAP<span class="w"> </span>SUMMARY:
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">     </span><span class="k">in</span><span class="w"> </span>use<span class="w"> </span>at<span class="w"> </span>exit:<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">   </span>total<span class="w"> </span>heap<span class="w"> </span>usage:<span class="w"> </span><span class="m">1</span><span class="w"> </span>allocs,<span class="w"> </span><span class="m">0</span><span class="w"> </span>frees,<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="nv">allocated</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>blocks<span class="w"> </span>are<span class="w"> </span>definitely<span class="w"> </span>lost<span class="w"> </span><span class="k">in</span><span class="w"> </span>loss<span class="w"> </span>record<span class="w"> </span><span class="m">1</span><span class="w"> </span>of<span class="w"> </span><span class="nv">1</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">    </span>at<span class="w"> </span>0x4C2AB80:<span class="w"> </span>malloc<span class="w"> </span><span class="o">(</span><span class="k">in</span><span class="w"> </span>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so<span class="o">)</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">    </span>by<span class="w"> </span>0x40053E:<span class="w"> </span>main<span class="w"> </span><span class="o">(</span>memory.c:6<span class="o">)</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>LEAK<span class="w"> </span>SUMMARY:
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">    </span>definitely<span class="w"> </span>lost:<span class="w"> </span><span class="m">12</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">    </span>indirectly<span class="w"> </span>lost:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">      </span>possibly<span class="w"> </span>lost:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">    </span>still<span class="w"> </span>reachable:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w">         </span>suppressed:<span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="nv">blocks</span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>For<span class="w"> </span>counts<span class="w"> </span>of<span class="w"> </span>detected<span class="w"> </span>and<span class="w"> </span>suppressed<span class="w"> </span>errors,<span class="w"> </span>rerun<span class="w"> </span>with:<span class="w"> </span>-v
+<span class="o">==</span><span class="nv">3052</span><span class="o">==</span><span class="w"> </span>ERROR<span class="w"> </span>SUMMARY:<span class="w"> </span><span class="m">2</span><span class="w"> </span>errors<span class="w"> </span>from<span class="w"> </span><span class="m">2</span><span class="w"> </span>contexts<span class="w"> </span><span class="o">(</span>suppressed:<span class="w"> </span><span class="m">0</span><span class="w"> </span>from<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="segmentation-fault">
+<h2>Segmentation Fault<a class="headerlink" href="#segmentation-fault" title="Link to this heading">#</a></h2>
+<p>Popular error programmers encounter, when trying to read/write to memory that we don’t have access to.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">51</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Can be tracked using valgrind.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="command-line-arguments">
+<h1>Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Programs of our own can also take in command-line arguments, or inputs given to our program in the command we use to run it.</p></li>
+<li><p>We can change what our main function to no longer take in void, or no arguments, and instead:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>argc and argv are two variables that our main function will now get automatically when our program is run from the command line.</p>
+<p><em>argc</em>
+Is the number of arguments provided to main when called from cmd.
+<em>argv</em>
+argument vector (or argument list), is an array of the arguments provided to main, the first argument, argv[0], is the name of our program.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="w">  </span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We should make sure that we have the right number of arguments before we try to print something that isn’t there:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="w">  </span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Suppose we want to write a program that accepts two command line arguments and prints their sums:</p>
+<section id="atoi">
+<h2>atoi<a class="headerlink" href="#atoi" title="Link to this heading">#</a></h2>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w">	</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">fprintf</span><span class="w"> </span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;wrong number of arguments!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="n">exit</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="w"> </span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="w">	</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="w"> </span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">	</span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="w">	</span><span class="n">exit</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The two calls to atoi convert the strings argv[1] and argv[2] to integers. atoi stands for “ASCII to integer.”</p>
+<p>What happen when the argument is not integer ?</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="read-data">
+<h1>Read Data<a class="headerlink" href="#read-data" title="Link to this heading">#</a></h1>
+<p>Next lessons you will see how to read/write to files in C.</p>
+<p>Now, we will see and alternative way to working with files which you will use in your HW1.</p>
+<p>Example Input</p>
+<p>8.1402,-5.8022,-7.2376</p>
+<p>10.1626,-7.4824,-6.5774</p>
+<p>9.3153,-5.4974,-6.7025</p>
+<p>9.7950,-5.2550,-9.1757</p>
+<p>7.9095,-6.6488,-7.6088</p>
+<p>The data we need to read is 2d matrix, if we know the size of it ahead of reading, this can be solved with instantiating a sta2d array.</p>
+<p>But, what if we don’t know the size before reading ?</p>
+<p>Answer: dynamic memory allocation.</p>
+<p>How?
+Answer: We will show an option with 2d linked list.</p>
+<p><strong>This is just one option and is not mandatory, you can read the data in different ways.</strong></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">cord</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">cord</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">vector</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">vector</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">cord</span><span class="w"> </span><span class="o">*</span><span class="n">cords</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">vector</span><span class="w"> </span><span class="o">*</span><span class="n">head_vec</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">curr_vec</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">next_vec</span><span class="p">;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">cord</span><span class="w"> </span><span class="o">*</span><span class="n">head_cord</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">curr_cord</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">next_cord</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">rows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">head_cord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">cord</span><span class="p">));</span>
+<span class="w">    </span><span class="n">curr_cord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head_cord</span><span class="p">;</span>
+<span class="w">    </span><span class="n">curr_cord</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">head_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">vector</span><span class="p">));</span>
+<span class="w">    </span><span class="n">curr_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head_vec</span><span class="p">;</span>
+<span class="w">    </span><span class="n">curr_vec</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lf%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">curr_cord</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">            </span><span class="n">curr_vec</span><span class="o">-&gt;</span><span class="n">cords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head_cord</span><span class="p">;</span>
+<span class="w">            </span><span class="n">curr_vec</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">vector</span><span class="p">));</span>
+<span class="w">            </span><span class="n">curr_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curr_vec</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="n">curr_vec</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">            </span><span class="n">head_cord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">cord</span><span class="p">));</span>
+<span class="w">            </span><span class="n">curr_cord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head_cord</span><span class="p">;</span>
+<span class="w">            </span><span class="n">curr_cord</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">curr_cord</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">        </span><span class="n">curr_cord</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">cord</span><span class="p">));</span>
+<span class="w">        </span><span class="n">curr_cord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curr_cord</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="w">        </span><span class="n">curr_cord</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">...</span>
+<span class="w">    </span><span class="c1">// free memory</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hw1">
+<h1>HW1<a class="headerlink" href="#hw1" title="Link to this heading">#</a></h1>
+<p>Kmeans Clustering.</p>
+<p><a class="reference external" href="http://alekseynp.com/viz/k-means.html">Online Simulation</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fun-topic">
+<h1>Fun Topic<a class="headerlink" href="#fun-topic" title="Link to this heading">#</a></h1>
+<section id="memory-imprecision">
+<h2>Memory imprecision<a class="headerlink" href="#memory-imprecision" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> imprecision.c
+<span class="c1">#include &lt;stdio.h&gt;</span>
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="n">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nb">float</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.50f</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting imprecision.c
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>gcc<span class="w"> </span>imprecision.c<span class="w"> </span>-o<span class="w"> </span>imp
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>./imp
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.10000000149011611938476562500000000000000000000000
+</pre></div>
+</div>
+</div>
+</div>
+<p>It turns out that this is called floating-point imprecision, where we don’t have enough bits to store all possible values. With a finite number of bits for a float, we can’t represent all possible real numbers (of which there are an infinite number of), so the computer has to store the closest value it can. And this can lead to problems where even small differences in value add up, unless the programmer uses some other way to represent decimal values as accurately as needed.</p>
+<p>More detailed explanation in the below video.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/wPBjd-vb9eI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/raminasser/anaconda3/envs/software_project/lib/python3.9/site-packages/IPython/core/display.py:431: UserWarning: Consider using IPython.display.IFrame instead
+  warnings.warn(&quot;Consider using IPython.display.IFrame instead&quot;)
+</pre></div>
+</div>
+<div class="output text_html"><iframe width="560" height="315" src="https://www.youtube.com/embed/wPBjd-vb9eI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "raminass/Software-Project",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="arrays_pointers.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Arrays + Pointers</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="strings.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Strings</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">C Tutorial</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling">Compiling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-using-cmd">Manual using CMD</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-program">1.Running the program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-the-c-program">2.Compile the C program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-gdb">3.Launch gdb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-a-break-points-inside-c-program">4.Set up a break points inside C program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-c-program-in-gdb-debugger">5.Run the C program in gdb debugger</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-the-variable-values-inside-gdb-debugger">6.Printing the variable values inside gdb debugger</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-code-attempt-1">Fixing the Code, attempt 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-first-attempt-of-fixing">Checking first attempt of fixing:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continue-stepping-over-in-gdb-commands">7. Continue, stepping over/in – gdb commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-the-code-attempt-2">Fixing the code, attempt 2</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gdb-command-shortcuts">gdb command shortcuts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ide-debugging">IDE Debugging</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#memory">Memory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addresses-pointers">Addresses, pointers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-arrays">Strings, Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pointer-arithmetic">Pointer arithmetic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valgrind">Valgrind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segmentation-fault">Segmentation Fault</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-arguments">Command-line arguments</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atoi">atoi</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#read-data">Read Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hw1">HW1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fun-topic">Fun Topic</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-imprecision">Memory imprecision</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Rami Nasser, School of Computer Science and AI, Tel Aviv University, Tel Aviv 6997801, Israel.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
