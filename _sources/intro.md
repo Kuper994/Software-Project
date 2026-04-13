@@ -41,11 +41,11 @@ Task: Clustering
 
 ## Course Schedule
 
-| Class no. | Subject and Requirements | Wed (13:00-15:00) |
+| Class no. | Subject and Requirements | Wed (13:00-15:00), Thr (15:00-17:00)
 |-----------|--------------------------|----------------|
-| 1         | The programming environment & Python review | 28/10/2025 |
-| 2         | Introduction and basic C (ex. 0) | 04/11/2025 |
-| 3         | Functions | 11/11/2025 |
+| 1         | The programming environment & Python review | 15-16/4/2026 |
+| 2         | Introduction and basic C (ex. 0) | 23/04/2026 |
+| 3         | Functions | 29-30/04/2026 |
 | 4         | Arrays and pointers | 18/11/2025 |
 | 5         | C tutorial (ex. 1) | 25/11/2025 |
 | 6         | Strings and dynamic memory | 02/12/2025 |
