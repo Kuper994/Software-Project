@@ -1,33 +1,31 @@
-FROM ubuntu:24.04
+FROM python:3.12
 
-ENV DEBIAN_FRONTEND=noninteractive
-ENV PYTHONUNBUFFERED=1
-ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
 
+# Install system tools and development dependencies.
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3 \
-    python3-pip \
-    python3-venv \
-    python3-dev \
-    python3-pandas \
-    python3-numpy \
-    python3-psycopg2 \
+    bash \
+    ca-certificates \
+    curl \
+    git \
+    postgresql-client \
     gcc \
     g++ \
     gdb \
     valgrind \
     make \
     cmake \
-    git \
+    python3-dev \
     openssh-server \
     sudo \
     vim \
-    curl \
     wget \
-    ca-certificates \
-    postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
+# Make /usr/bin/python3 use the Python 3.12 interpreter from the official image.
+RUN ln -sf /usr/local/bin/python3 /usr/bin/python3 \
+    && ln -sf /usr/local/bin/python3 /usr/bin/python
 
 # Install the Docker CLI and Compose v2 plugin (amd64 / arm64).
 RUN set -eux; \
@@ -46,12 +44,21 @@ RUN set -eux; \
         -o /usr/local/lib/docker/cli-plugins/docker-compose; \
     chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
+# Install all Python dependencies globally from requirements.txt.
+WORKDIR /home/student
+COPY requirements.txt /tmp/requirements.txt
+RUN python3 -m pip install --no-cache-dir --upgrade pip \
+    && python3 -m pip install --no-cache-dir -r /tmp/requirements.txt \
+    && python3 -m pip check \
+    && python3 -c "import pandas; print('pandas:', pandas.__version__)"
 
-
-WORKDIR /workspace
-
+# Create the student account and configure SSH.
 RUN useradd -m -s /bin/bash student \
     && echo 'student:course' | chpasswd \
-    && mkdir -p /run/sshd
+    && mkdir -p /run/sshd \
+    && sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/' \
+        /etc/ssh/sshd_config
+
+EXPOSE 22
 
 CMD ["/usr/sbin/sshd", "-D"]
