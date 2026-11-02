@@ -1,5 +1,5 @@
-# C basics · 1.12.26
+# C basics
 
-**1.12.26 · Week 6 · Didi**
+**1.12.26**
 
 Notes for this meeting: Linked Lists, and The Preprocessor.

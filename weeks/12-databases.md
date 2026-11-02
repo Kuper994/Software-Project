@@ -1,6 +1,6 @@
 # Databases
 
-**5.1.27 · Week 11 · Yael**
+**5.1.27**
 
-SQL / noSQL / Postgres. The schedule marks this meeting as
-**[Change reqs.]**. Lecture notes will be added here.
+SQL / noSQL / Postgres. The schedule marks this meeting as **[Change reqs.]**.
+Lecture notes will be added here.

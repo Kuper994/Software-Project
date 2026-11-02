@@ -1,8 +1,6 @@
 # Project
 
-**3.11.26 · Week 2 · Didi**
-
-The schedule still marks the instructor for this meeting with a question mark.
+**3.11.26**
 
 **Task:** Page Rank
 

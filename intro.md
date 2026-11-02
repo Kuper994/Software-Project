@@ -46,17 +46,17 @@ schedule is still open.
 
 | Date | Week | Subject | Homework |
 | --- | --- | --- | --- |
-| 20.10.26 | 1 | [DevEnv + Docker (Yael)](weeks/01-devenv.md) | — |
-| 27.10.26 | — | [Election Day](weeks/02-election.md) | — |
-| 3.11.26 | 2 | [Project (Didi ?)](weeks/03-project.md) | — |
-| 10.11.26 | 3 | [C basics (Didi)](weeks/04-c-basics-w3.md) | HW0 |
-| 17.11.26 | 4 | [C basics (Didi)](weeks/05-c-basics-w4.md) | — |
-| 24.11.26 | 5 | [C basics (Didi)](weeks/06-c-basics-w5.md) | HW1 |
-| 1.12.26 | 6 | [C basics (Didi)](weeks/07-c-basics-w6.md) | — |
-| 8.12.26 | 7 | [C basics (Didi)](weeks/08-c-basics-w7.md) | — |
-| 15.12.26 | 8 | [C-Python + Python Data science libraries (Yael)](weeks/09-cpython.md) | — |
-| 22.12.26 | 9 | [Python Data science libraries (Yael)](weeks/10-python-ds.md) | HW2 |
-| 29.12.26 | 10 | [Large scale computing (Yael)](weeks/11-large-scale.md) | — |
-| 5.1.27 | 11 | [Databases — SQL / noSQL / Postgres (Yael)](weeks/12-databases.md) | — |
-| 12.1.27 | 12 | [Parallel/distributed — CUDA + docker compose (Yael)](weeks/13-parallel.md) | — |
-| 18.1.27 | 13 | [C Tutorial (?)](weeks/14-c-tutorial.md) | — |
+| 20.10.26 | 1 | [DevEnv + Docker](weeks/01-devenv.md) | — |
+| 27.10.26 | — | Election Day | — |
+| 3.11.26 | 2 | [Project](weeks/03-project.md) | — |
+| 10.11.26 | 3 | [C basics](weeks/04-c-basics-w3.md) | HW0 |
+| 17.11.26 | 4 | [C basics](weeks/05-c-basics-w4.md) | — |
+| 24.11.26 | 5 | [C basics](weeks/06-c-basics-w5.md) | HW1 |
+| 1.12.26 | 6 | [C basics](weeks/07-c-basics-w6.md) | — |
+| 8.12.26 | 7 | [C basics](weeks/08-c-basics-w7.md) | — |
+| 15.12.26 | 8 | [C-Python + Python Data science libraries](weeks/09-cpython.md) | — |
+| 22.12.26 | 9 | [Python Data science libraries](weeks/10-python-ds.md) | HW2 |
+| 29.12.26 | 10 | [Large scale computing](weeks/11-large-scale.md) | — |
+| 5.1.27 | 11 | [Databases — SQL / noSQL / Postgres](weeks/12-databases.md) | — |
+| 12.1.27 | 12 | [Parallel/distributed — CUDA + docker compose](weeks/13-parallel.md) | — |
+| 18.1.27 | 13 | [C Tutorial](weeks/14-c-tutorial.md) | — |

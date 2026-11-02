@@ -1,5 +1,5 @@
-# C basics · 8.12.26
+# C basics
 
-**8.12.26 · Week 7 · Didi**
+**8.12.26**
 
 Notes for this meeting: Files, and Bitwise Operators.

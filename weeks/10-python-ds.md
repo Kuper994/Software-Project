@@ -1,6 +1,6 @@
 # Python data science
 
-**22.12.26 · Week 9 · Yael**
+**22.12.26**
 
 **Homework:** HW2 (optional)
 

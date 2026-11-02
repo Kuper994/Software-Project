@@ -1,6 +1,6 @@
-# C basics · 24.11.26
+# C basics
 
-**24.11.26 · Week 5 · Didi**
+**24.11.26**
 
 **Homework:** HW1 (optional)
 

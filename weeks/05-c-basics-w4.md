@@ -1,5 +1,5 @@
-# C basics · 17.11.26
+# C basics
 
-**17.11.26 · Week 4 · Didi**
+**17.11.26**
 
 Notes for this meeting: Arrays + Pointers, and Strings.
