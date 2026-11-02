@@ -1,5 +1,5 @@
 title: Software Project
-author: Rami Nasser
+author: Yael Kupershmidt, Rami Nasser
 copyright: "2023"
 only_build_toc_files: true
 
@@ -21,8 +21,8 @@ html:
   home_page_in_navbar: true
   baseurl: https://kuper994.github.io/Software-Project
   extra_footer: |
-    By Rami Nasser, School of Computer Science and AI, Tel Aviv University,
-    Tel Aviv 6997801, Israel.
+    By Yael Kupershmidt, Rami Nasser, School of Computer Science and AI,
+    Tel Aviv University, Tel Aviv 6997801, Israel.
 
 repository:
   url: https://github.com/Kuper994/Software-Project
