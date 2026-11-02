@@ -1,0 +1,2653 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Large-Scale Projects &#8212; Software Project&lt;br&gt;0368-2161</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'large_scale';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://kuper994.github.io/Software-Project/large_scale.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Databases" href="weeks/12-databases.html" />
+    <link rel="prev" title="Machine Learning" href="scikit_learn.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Software Project<br>0368-2161</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Development_Environment.html">Development Environment</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Python_review.html">Python Review</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="weeks/03-project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction_to_C.html">Intro to C</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arrays_pointers.html">Arrays + Pointers</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="strings.html">Strings</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="dynamicMemory.html">Dynamic memory allocation</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="structures.html">Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linkedLists.html">Linked Lists</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="preprocessor.html">The Preprocessor</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Files.html">Files</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Bitwise_Operators.html">Bitwise Operators</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="C_Python_API.html">C Python API</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="pandas.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scikit_learn.html">Machine Learning</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Large-Scale Projects</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="weeks/12-databases.html">Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel-programming.html">Parallel Programming</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="C_tutorial.html">C Tutorial</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="c_exam.html">C Exam Questions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Kuper994/Software-Project" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Kuper994/Software-Project/issues/new?title=Issue%20on%20page%20%2Flarge_scale.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/large_scale.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Large-Scale Projects</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Large-Scale Projects</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-with-one-c-file">1. Start with one C file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#c-modules-split-the-program">2. C modules: split the program</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-link-see-the-intermediate-files">2.1 Compile → link: see the intermediate files</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-what-actually-needs-rebuilding">3. Dependencies: what actually needs rebuilding?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#make-let-the-computer-manage-the-dependency-graph">4. Make: let the computer manage the dependency graph</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-makefile">What is a Makefile?</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observe-incremental-compilation">Observe incremental compilation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-makefile-detective">Exercise: Makefile detective</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn-change-only-one-implementation">Your turn — change only one implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn-change-a-header">Your turn — change a header</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-common-makefile-mistake">A common Makefile mistake</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-branches">5. Git and Branches</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-git">What is Git?</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-basic-git-workflow">The basic Git workflow</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-a-local-remote-repository">Configure a local remote repository</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-commit">First commit</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-diff-is-your-microscope">5.1 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> is your microscope</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-history-with">Inspect the history with:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#branches-work-on-a-feature-without-disturbing-main">6. Branches: work on a feature without disturbing <code class="docutils literal notranslate"><span class="pre">main</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merge-it">Merge it</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-controlled-merge-conflict">7. A controlled merge conflict</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolve-the-conflict">Resolve the conflict</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn">Your turn</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-make-the-computer-check-your-assumptions">8. Testing: make the computer check your assumptions</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-regression-test">8.1 Write a regression test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-testing-a-c-module">8.2 Unit testing a C module</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn-add-a-test-that-catches-a-bug">Your turn — add a test that catches a bug</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-testing-and-a-golden-output">9. Regression testing and a golden output</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-break-the-golden-output">Exercise: Break the golden output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-work">Check your work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-testing">10. Integration testing</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-find-an-integration-bug">Exercise: Find an integration bug</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-testing-measure-before-optimizing">11. Performance testing: measure before optimizing</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-measure-variability">Exercise: Measure variability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logging">12. Logging</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn-choose-the-right-level">Your turn — choose the right level</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-logging-to-the-c-program">12.1 Add logging to the C program</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observe-stdout-vs-stderr">Observe stdout vs stderr</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ci-cd-from-code-to-release">13. CI/CD: From Code to Release</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#three-stages">Three stages</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration-ci-does-it-work">1. Continuous Integration (CI) — Does it work?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-delivery-is-it-ready-to-release">2. Continuous Delivery — Is it ready to release?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-deployment-release-it-automatically">3. Continuous Deployment — Release it automatically!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-a-ci-pipeline-for-a-c-project">Example: A CI pipeline for a C project</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-lifecycle-put-the-tools-together">14. Project lifecycle: put the tools together</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-choose-the-right-tool">Exercise: Choose the right tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your work</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-a-real-remote-repository">15. Connecting to a real remote repository</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><a href="https://colab.research.google.com/github/Kuper994/Software-Project/blob/main/large_scale.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="large-scale-projects">
+<h1>Large-Scale Projects<a class="headerlink" href="#large-scale-projects" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="start-with-one-c-file">
+<h2>1. Start with one C file<a class="headerlink" href="#start-with-one-c-file" title="Link to this heading">#</a></h2>
+<p>We start with a tiny calculator split into modules. The important pattern is:</p>
+<ul class="simple">
+<li><p>the header declares the interface;</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">.c</span></code> file implements it;</p></li>
+<li><p>the caller includes the header;</p></li>
+<li><p>all required object files are linked into the executable.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">WORKDIR</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">"large_scale_lecture_project"</span>
+<span class="k">if</span> <span class="n">WORKDIR</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">WORKDIR</span><span class="p">)</span>
+<span class="n">WORKDIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">hello</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"hello.c"</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#include &lt;stdio.h&gt;</span>
+
+<span class="s1">int main(void)</span>
+<span class="s1">{</span>
+<span class="s1">    printf("Hello from C!\n");</span>
+<span class="s1">    return 0;</span>
+<span class="s1">}</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">hello</span><span class="o">.</span><span class="n">read_text</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf("Hello from C!\n");
+    return 0;
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"gcc"</span><span class="p">,</span> <span class="s2">"-ansi"</span><span class="p">,</span> <span class="s2">"-Wall"</span><span class="p">,</span> <span class="s2">"-Wextra"</span><span class="p">,</span> <span class="s2">"-Werror"</span><span class="p">,</span> <span class="s2">"-pedantic-errors"</span><span class="p">,</span> <span class="s2">"-o"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"hello"</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">hello</span><span class="p">)],</span>
+    <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"hello"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello from C!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="c-modules-split-the-program">
+<h1>2. C modules: split the program<a class="headerlink" href="#c-modules-split-the-program" title="Link to this heading">#</a></h1>
+<p>A large program should not become one enormous <code class="docutils literal notranslate"><span class="pre">.c</span></code> file.</p>
+<p>We will build a tiny calculator with:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">main.c</span></code> — user-facing program;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math_utils.c</span></code> / <code class="docutils literal notranslate"><span class="pre">math_utils.h</span></code> — arithmetic functions;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string_utils.c</span></code> / <code class="docutils literal notranslate"><span class="pre">string_utils.h</span></code> — formatting functions.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">.h</span></code> files contain <strong>declarations</strong>; the <code class="docutils literal notranslate"><span class="pre">.c</span></code> files contain <strong>definitions</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the initial multi-file project</span>
+<span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"math_utils.h"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#ifndef MATH_UTILS_H</span>
+<span class="s1">#define MATH_UTILS_H</span>
+
+<span class="s1">int add(int a, int b);</span>
+<span class="s1">int multiply(int a, int b);</span>
+<span class="s1">int subtract(int a, int b);</span>
+
+<span class="s1">#endif</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"math_utils.c"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#include "math_utils.h"</span>
+
+<span class="s1">int add(int a, int b)</span>
+<span class="s1">{</span>
+<span class="s1">    return a + b;</span>
+<span class="s1">}</span>
+
+<span class="s1">int multiply(int a, int b)</span>
+<span class="s1">{</span>
+<span class="s1">    return a * b;</span>
+<span class="s1">}</span>
+
+<span class="s1">int subtract(int a, int b)</span>
+<span class="s1">{</span>
+<span class="s1">    return a - b;</span>
+<span class="s1">}</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"string_utils.h"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#ifndef STRING_UTILS_H</span>
+<span class="s1">#define STRING_UTILS_H</span>
+
+<span class="s1">void print_result(const char *operation, int value);</span>
+
+<span class="s1">#endif</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"string_utils.c"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#include &lt;stdio.h&gt;</span>
+<span class="s1">#include "string_utils.h"</span>
+
+<span class="s1">void print_result(const char *operation, int value)</span>
+<span class="s1">{</span>
+<span class="s1">    printf("</span><span class="si">%s</span><span class="s1"> = </span><span class="si">%d</span><span class="s1">\n", operation, value);</span>
+<span class="s1">}</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"main.c"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#include "math_utils.h"</span>
+<span class="s1">#include "string_utils.h"</span>
+
+<span class="s1">int main(void)</span>
+<span class="s1">{</span>
+<span class="s1">    print_result("2 + 3", add(2, 3));</span>
+<span class="s1">    print_result("4 * 5", multiply(4, 5));</span>
+<span class="s1">    print_result("4 - 5", subtract(4, 2));</span>
+<span class="s1">    return 0;</span>
+<span class="s1">}</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>main.c
+math_utils.c
+math_utils.h
+string_utils.c
+string_utils.h
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compile and link all three source files in one command.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"gcc"</span><span class="p">,</span> <span class="s2">"-ansi"</span><span class="p">,</span> <span class="s2">"-Wall"</span><span class="p">,</span> <span class="s2">"-Wextra"</span><span class="p">,</span> <span class="s2">"-pedantic-errors"</span><span class="p">,</span>
+     <span class="s2">"-o"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">),</span>
+     <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"main.c"</span><span class="p">),</span>
+     <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"math_utils.c"</span><span class="p">),</span>
+     <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"string_utils.c"</span><span class="p">)],</span>
+    <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="n">run</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">run</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 + 3 = 5
+4 * 5 = 20
+4 - 5 = 2
+</pre></div>
+</div>
+</div>
+</div>
+<section id="compile-link-see-the-intermediate-files">
+<h2>2.1 Compile → link: see the intermediate files<a class="headerlink" href="#compile-link-see-the-intermediate-files" title="Link to this heading">#</a></h2>
+<p>The previous command hides an important process. Compilation and linking are separate steps.</p>
+<p>Let’s create object files explicitly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"main.c"</span><span class="p">,</span> <span class="s2">"math_utils.c"</span><span class="p">,</span> <span class="s2">"string_utils.c"</span><span class="p">]:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="p">[</span><span class="s2">"gcc"</span><span class="p">,</span> <span class="s2">"-ansi"</span><span class="p">,</span> <span class="s2">"-Wall"</span><span class="p">,</span> <span class="s2">"-Wextra"</span><span class="p">,</span> <span class="s2">"-Werror"</span><span class="p">,</span> <span class="s2">"-pedantic-errors"</span><span class="p">,</span> <span class="s2">"-c"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="n">source</span><span class="p">),</span>
+         <span class="s2">"-o"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="n">source</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">".c"</span><span class="p">,</span> <span class="s2">".o"</span><span class="p">))],</span>
+        <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="s2">"-&gt;"</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Object files:"</span><span class="p">,</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"*.o"</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>main.c -&gt; 0
+math_utils.c -&gt; 0
+string_utils.c -&gt; 0
+Object files: ['math_utils.o', 'main.o', 'string_utils.o']
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">objects</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"*.o"</span><span class="p">))]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"gcc"</span><span class="p">,</span> <span class="s2">"-o"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator_from_objects"</span><span class="p">),</span> <span class="o">*</span><span class="n">objects</span><span class="p">],</span>
+    <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator_from_objects"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 + 3 = 5
+4 * 5 = 20
+4 - 5 = 2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dependencies-what-actually-needs-rebuilding">
+<h1>3. Dependencies: what actually needs rebuilding?<a class="headerlink" href="#dependencies-what-actually-needs-rebuilding" title="Link to this heading">#</a></h1>
+<p>Now we get to the reason large projects need build systems.</p>
+<p>Imagine the project contains:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>main.c
+math_utils.c
+math_utils.h
+string_utils.c
+string_utils.h
+</pre></div>
+</div>
+<p>Ask the key question:</p>
+<blockquote>
+<div><p>If one file changes, which object files become stale?</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="make-let-the-computer-manage-the-dependency-graph">
+<h1>4. Make: let the computer manage the dependency graph<a class="headerlink" href="#make-let-the-computer-manage-the-dependency-graph" title="Link to this heading">#</a></h1>
+<section id="what-is-a-makefile">
+<h2>What is a Makefile?<a class="headerlink" href="#what-is-a-makefile" title="Link to this heading">#</a></h2>
+<p>A <strong>Makefile is a build recipe + dependency map</strong>. Instead of remembering which <code class="docutils literal notranslate"><span class="pre">gcc</span></code> commands to run,
+we describe <strong>what depends on what</strong>, and <code class="docutils literal notranslate"><span class="pre">make</span></code> decides what needs to be rebuilt.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                  DEPENDENCIES                         ACTION
+              ┌─────────────────┐
+              │   main.c        │
+              └────────┬────────┘
+                       │ compile
+                       ▼
+                    main.o ──────────┐
+                                     │
+              ┌─────────────────┐    │
+              │ math_utils.c    │    │
+              └────────┬────────┘    │
+                       │ compile     │
+                       ▼             │
+                  math_utils.o ──────┤
+                                     │ link
+              ┌─────────────────┐    │
+              │ string_utils.c  │    │
+              └────────┬────────┘    │
+                       │ compile     │
+                       ▼             │
+                string_utils.o ──────┘
+                                     │
+                                     ▼
+                               ┌────────────┐
+                               │ calculator │
+                               └────────────┘
+</pre></div>
+</div>
+<p>The core Makefile pattern is simply:</p>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nf">target</span><span class="o">:</span><span class="w"> </span><span class="n">prerequisites</span>
+<span class="w">	</span><span class="nb">command</span><span class="w"> </span>to<span class="w"> </span>build<span class="w"> </span>target
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nf">math_utils.o</span><span class="o">:</span><span class="w"> </span><span class="n">src</span>/<span class="n">math_utils</span>.<span class="n">c</span> <span class="n">src</span>/<span class="n">math_utils</span>.<span class="n">h</span>
+<span class="w">	</span>gcc<span class="w"> </span>-ansi<span class="w"> </span>-Wall<span class="w"> </span>-Wextra<span class="w"> </span>-Werror<span class="w"> </span>-pedantic-errors<span class="w"> </span>-c<span class="w"> </span>src/math_utils.c<span class="w"> </span>-o<span class="w"> </span>math_utils.o
+</pre></div>
+</div>
+<p><strong>The useful part:</strong> if only <code class="docutils literal notranslate"><span class="pre">math_utils.c</span></code> changes, Make does not need to rebuild everything.
+It follows the dependency graph and rebuilds only what is affected.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">CC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>gcc
+<span class="nv">CFLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-ansi<span class="w"> </span>-Wall<span class="w"> </span>-Wextra<span class="w"> </span>-Werror<span class="w"> </span>-pedantic-errors
+
+calculator:<span class="w"> </span>main.o<span class="w"> </span>math_utils.o<span class="w"> </span>string_utils.o
+<span class="w">	</span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span>calculator<span class="w"> </span>main.o<span class="w"> </span>math_utils.o<span class="w"> </span>string_utils.o
+
+main.o:<span class="w"> </span>src/main.c<span class="w"> </span>src/math_utils.h<span class="w"> </span>src/string_utils.h
+<span class="w">	</span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span><span class="k">$(</span>CFLAGS<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>src/main.c
+
+math_utils.o:<span class="w"> </span>src/math_utils.c<span class="w"> </span>src/math_utils.h
+<span class="w">	</span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span><span class="k">$(</span>CFLAGS<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>src/math_utils.c
+
+string_utils.o:<span class="w"> </span>src/string_utils.c<span class="w"> </span>src/string_utils.h
+<span class="w">	</span><span class="k">$(</span>CC<span class="k">)</span><span class="w"> </span><span class="k">$(</span>CFLAGS<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>src/string_utils.c
+
+clean:
+<span class="w">	</span>rm<span class="w"> </span>-f<span class="w"> </span>calculator<span class="w"> </span>*.o
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">makefile</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"Makefile"</span>
+<span class="n">makefile</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">CC = gcc</span>
+<span class="s1">CFLAGS = -ansi -Wall -Wextra -Werror -pedantic-errors</span>
+<span class="s1">OBJECTS = main.o math_utils.o string_utils.o</span>
+
+<span class="s1">calculator: $(OBJECTS)</span>
+<span class="s1">	$(CC) -o calculator $(OBJECTS)</span>
+
+<span class="s1">main.o: src/main.c src/math_utils.h src/string_utils.h</span>
+<span class="s1">	$(CC) $(CFLAGS) -c src/main.c</span>
+
+<span class="s1">math_utils.o: src/math_utils.c src/math_utils.h</span>
+<span class="s1">	$(CC) $(CFLAGS) -c src/math_utils.c</span>
+
+<span class="s1">string_utils.o: src/string_utils.c src/string_utils.h</span>
+<span class="s1">	$(CC) $(CFLAGS) -c src/string_utils.c</span>
+
+<span class="s1">clean:</span>
+<span class="s1">	rm -f calculator *.o</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>461
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">run_make</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"make"</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">run_make</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/main.c
+gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c
+gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/string_utils.c
+gcc -o calculator main.o math_utils.o string_utils.o
+</pre></div>
+</div>
+</div>
+</div>
+<section id="observe-incremental-compilation">
+<h3>Observe incremental compilation<a class="headerlink" href="#observe-incremental-compilation" title="Link to this heading">#</a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">make</span></code> <strong>again</strong> without changing anything.</p>
+<p>What does Make do differently this time?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">run_make</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>make: 'calculator' is up to date.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CompletedProcess(args=['make'], returncode=0, stdout="make: 'calculator' is up to date.\n", stderr='')
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-makefile-detective">
+<h3>Exercise: Makefile detective<a class="headerlink" href="#exercise-makefile-detective" title="Link to this heading">#</a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">make</span></code> twice. Then touch only <code class="docutils literal notranslate"><span class="pre">src/string_utils.c</span></code> and run <code class="docutils literal notranslate"><span class="pre">make</span></code> again. Record exactly which <code class="docutils literal notranslate"><span class="pre">.o</span></code> files and the executable are rebuilt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">subprocess</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"string_utils.c"</span>
+<span class="n">os</span><span class="o">.</span><span class="n">utime</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"make"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/string_utils.c
+gcc -o calculator main.o math_utils.o string_utils.o
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="your-turn-change-only-one-implementation">
+<h3>Your turn — change only one implementation<a class="headerlink" href="#your-turn-change-only-one-implementation" title="Link to this heading">#</a></h3>
+<p>Change the return value of <code class="docutils literal notranslate"><span class="pre">multiply()</span></code> from <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span></code> to <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span> <span class="pre">+</span> <span class="pre">1</span></code>.</p>
+<p>Before running <code class="docutils literal notranslate"><span class="pre">make</span></code>, predict which commands should run:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">main.c</span></code> → <code class="docutils literal notranslate"><span class="pre">main.o</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math_utils.c</span></code> → <code class="docutils literal notranslate"><span class="pre">math_utils.o</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string_utils.c</span></code> → <code class="docutils literal notranslate"><span class="pre">string_utils.o</span></code>?</p></li>
+<li><p>link the final executable?</p></li>
+</ul>
+<p>Then make the change and run <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"math_utils.c"</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"return a * b;"</span><span class="p">,</span> <span class="s2">"return a * b + 1;"</span><span class="p">)</span>
+<span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">run_make</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c
+gcc -o calculator main.o math_utils.o string_utils.o
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CompletedProcess(args=['make'], returncode=0, stdout='gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c\ngcc -o calculator main.o math_utils.o string_utils.o\n', stderr='')
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="your-turn-change-a-header">
+<h3>Your turn — change a header<a class="headerlink" href="#your-turn-change-a-header" title="Link to this heading">#</a></h3>
+<p>Now change the declaration of <code class="docutils literal notranslate"><span class="pre">multiply()</span></code> in <code class="docutils literal notranslate"><span class="pre">math_utils.h</span></code> <strong>without changing its meaning</strong>, for example by changing whitespace or adding a comment.</p>
+<p>Run <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
+<p><strong>Why should <code class="docutils literal notranslate"><span class="pre">main.o</span></code> be rebuilt even though <code class="docutils literal notranslate"><span class="pre">main.c</span></code> did not change?</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"math_utils.h"</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"int multiply(int a, int b);"</span><span class="p">,</span> <span class="s2">"int multiply(int a, int b); /* multiplication */"</span><span class="p">)</span>
+<span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">run_make</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/main.c
+gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c
+gcc -o calculator main.o math_utils.o string_utils.o
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CompletedProcess(args=['make'], returncode=0, stdout='gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/main.c\ngcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c\ngcc -o calculator main.o math_utils.o string_utils.o\n', stderr='')
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="a-common-makefile-mistake">
+<h2>A common Makefile mistake<a class="headerlink" href="#a-common-makefile-mistake" title="Link to this heading">#</a></h2>
+<p>Suppose someone writes:</p>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nf">main.o</span><span class="o">:</span><span class="w"> </span><span class="n">main</span>.<span class="n">c</span>
+</pre></div>
+</div>
+<p>even though <code class="docutils literal notranslate"><span class="pre">main.c</span></code> includes <code class="docutils literal notranslate"><span class="pre">math_utils.h</span></code>.</p>
+<p>Then <code class="docutils literal notranslate"><span class="pre">make</span></code> has no way to know that changing <code class="docutils literal notranslate"><span class="pre">math_utils.h</span></code> makes <code class="docutils literal notranslate"><span class="pre">main.o</span></code> stale.</p>
+<p><strong>Fix the dependency list below.</strong></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="git-and-branches">
+<h1>5. Git and Branches<a class="headerlink" href="#git-and-branches" title="Link to this heading">#</a></h1>
+<section id="what-is-git">
+<h2>What is Git?<a class="headerlink" href="#what-is-git" title="Link to this heading">#</a></h2>
+<p><strong>Git is a version control system.</strong></p>
+<p>It keeps a history of changes to your project, allowing you to:</p>
+<ul class="simple">
+<li><p>see what changed and when</p></li>
+<li><p>go back to an earlier version</p></li>
+<li><p>work on different features independently</p></li>
+<li><p>collaborate with other developers</p></li>
+<li><p>combine changes made by different people</p></li>
+</ul>
+<p>Think of Git as a <strong>timeline of your project</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Project history
+
+   A              B              C              D
+   ●──────────────●──────────────●──────────────●
+   │              │              │              │
+ initial       add module     fix bug       add tests
+ commit        commit         commit         commit
+</pre></div>
+</div>
+<p>Each point is a <strong>commit</strong>.</p>
+<p>A commit is a snapshot of the project at a particular point in time, together with information about what changed.</p>
+<section id="the-basic-git-workflow">
+<h3>The basic Git workflow<a class="headerlink" href="#the-basic-git-workflow" title="Link to this heading">#</a></h3>
+<p>When you modify files, Git lets you choose which changes should become part of the next commit.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                    git add                 git commit
+                       │                        │
+                       ▼                        ▼
+ Working directory → Staging area → Repository history
+    (changes)     (selected changes)       (snapshot)
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
+git<span class="w"> </span>add<span class="w"> </span>src/math_utils.c
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Fix multiplication"</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="configure-a-local-remote-repository">
+<h2>Configure a local remote repository<a class="headerlink" href="#configure-a-local-remote-repository" title="Link to this heading">#</a></h2>
+<p>To practice pushing and pulling without GitHub authentication, we will create a <strong>bare Git repository</strong> on the same machine.
+It behaves like a remote repository, but everything stays inside this Colab runtime. No credentials or network access are needed.</p>
+<p>Later, at the end of the lecture, we will see how to replace this local remote with a real GitHub remote.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize Git in the project and create a local bare repository to act as origin.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+
+<span class="n">REMOTE_DIR</span> <span class="o">=</span> <span class="n">WORKDIR</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"large_scale_remote.git"</span>
+<span class="k">if</span> <span class="n">REMOTE_DIR</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">REMOTE_DIR</span><span class="p">)</span>
+
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"init"</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"main"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"config"</span><span class="p">,</span> <span class="s2">"user.name"</span><span class="p">,</span> <span class="s2">"Lecture Student"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"config"</span><span class="p">,</span> <span class="s2">"user.email"</span><span class="p">,</span> <span class="s2">"student@example.com"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"init"</span><span class="p">,</span> <span class="s2">"--bare"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">REMOTE_DIR</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"remote"</span><span class="p">,</span> <span class="s2">"add"</span><span class="p">,</span> <span class="s2">"origin"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">REMOTE_DIR</span><span class="p">)],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">command</span> <span class="ow">in</span> <span class="p">[[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"remote"</span><span class="p">,</span> <span class="s2">"-v"</span><span class="p">]]:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"$"</span><span class="p">,</span> <span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">command</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+	Makefile
+	calculator
+	calculator_from_objects
+	hello
+	hello.c
+	main.o
+	math_utils.o
+	src/
+	string_utils.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git remote -v
+origin	/content/large_scale_remote.git (fetch)
+origin	/content/large_scale_remote.git (push)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="first-commit">
+<h3>First commit<a class="headerlink" href="#first-commit" title="Link to this heading">#</a></h3>
+<p>Stage the source files and Makefile, inspect what is staged, and commit.</p>
+<p><strong>Try the commands yourself in the terminal or use the next cells.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"add"</span><span class="p">,</span> <span class="s2">"src"</span><span class="p">,</span> <span class="s2">"Makefile"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"diff"</span><span class="p">,</span> <span class="s2">"--staged"</span><span class="p">,</span> <span class="s2">"--stat"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Makefile           |  18 ++++++++++++++++++
+ src/main.c         |  10 ++++++++++
+ src/main.o         | Bin 0 -&gt; 1848 bytes
+ src/math_utils.c   |  16 ++++++++++++++++
+ src/math_utils.h   |   8 ++++++++
+ src/math_utils.o   | Bin 0 -&gt; 1464 bytes
+ src/string_utils.c |   7 +++++++
+ src/string_utils.h |   6 ++++++
+ src/string_utils.o | Bin 0 -&gt; 1536 bytes
+ 9 files changed, 65 insertions(+)
+
+
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+	new file:   Makefile
+	new file:   src/main.c
+	new file:   src/main.o
+	new file:   src/math_utils.c
+	new file:   src/math_utils.h
+	new file:   src/math_utils.o
+	new file:   src/string_utils.c
+	new file:   src/string_utils.h
+	new file:   src/string_utils.o
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+	calculator
+	calculator_from_objects
+	hello
+	hello.c
+	main.o
+	math_utils.o
+	string_utils.o
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"commit"</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"Initial calculator project"</span><span class="p">],</span>
+    <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[main (root-commit) 774f76f] Initial calculator project
+ 9 files changed, 65 insertions(+)
+ create mode 100644 Makefile
+ create mode 100644 src/main.c
+ create mode 100644 src/main.o
+ create mode 100644 src/math_utils.c
+ create mode 100644 src/math_utils.h
+ create mode 100644 src/math_utils.o
+ create mode 100644 src/string_utils.c
+ create mode 100644 src/string_utils.h
+ create mode 100644 src/string_utils.o
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Push the initial commit to the local remote. This requires no GitHub credentials.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"push"</span><span class="p">,</span> <span class="s2">"-u"</span><span class="p">,</span> <span class="s2">"origin"</span><span class="p">,</span> <span class="s2">"main"</span><span class="p">],</span>
+    <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>branch 'main' set up to track 'origin/main'.
+
+To /content/large_scale_remote.git
+ * [new branch]      main -&gt; main
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="git-diff-is-your-microscope">
+<h2>5.1 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> is your microscope<a class="headerlink" href="#git-diff-is-your-microscope" title="Link to this heading">#</a></h2>
+<p>Make a small change, but <strong>do not commit it yet</strong>.</p>
+<p>Then inspect:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code></p></li>
+<li><p>stage the file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--staged</span></code></p></li>
+</ol>
+<p>What is the difference between the last two?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"main.c"</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'print_result("2 + 3", add(2, 3));'</span><span class="p">,</span> <span class="s1">'print_result("10 + 7", add(10, 7));'</span><span class="p">)</span>
+<span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">command</span> <span class="ow">in</span> <span class="p">[[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"diff"</span><span class="p">]]:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"$"</span><span class="p">,</span> <span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">command</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+	modified:   src/main.c
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+	calculator
+	calculator_from_objects
+	hello
+	hello.c
+	main.o
+	math_utils.o
+	string_utils.o
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git diff
+diff --git a/src/main.c b/src/main.c
+index a97f173..2175526 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -3,7 +3,7 @@
+ 
+ int main(void)
+ {
+-    print_result("2 + 3", add(2, 3));
++    print_result("10 + 7", add(10, 7));
+     print_result("4 * 5", multiply(4, 5));
+     print_result("4 - 5", subtract(4, 2));
+     return 0;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"commit"</span><span class="p">,</span> <span class="s2">"-am"</span><span class="p">,</span> <span class="s2">" changed main"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"status"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+	calculator
+	calculator_from_objects
+	hello
+	hello.c
+	main.o
+	math_utils.o
+	string_utils.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="inspect-the-history-with">
+<h3>Inspect the history with:<a class="headerlink" href="#inspect-the-history-with" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="nb">print</span><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"log"</span><span class="p">,</span> <span class="s2">"--oneline"</span><span class="p">,</span> <span class="s2">"--decorate"</span><span class="p">,</span> <span class="s2">"-5"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                     <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4690440 (HEAD -&gt; main)  changed main
+774f76f (origin/main) Initial calculator project
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="branches-work-on-a-feature-without-disturbing-main">
+<h1>6. Branches: work on a feature without disturbing <code class="docutils literal notranslate"><span class="pre">main</span></code><a class="headerlink" href="#branches-work-on-a-feature-without-disturbing-main" title="Link to this heading">#</a></h1>
+<p>###What is a branch?
+A branch is an independent line of development.</p>
+<p>Imagine that your project currently looks like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                   main
+                    │
+                    ▼
+A ──────── B ─────── C
+</pre></div>
+</div>
+<p>You want to add a new feature, but you don’t want to modify main directly.
+Create a branch:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                   feature
+                      │
+                      ▼
+A ──────── B ─────── C
+                      │
+                   main
+</pre></div>
+</div>
+<p>Now you can make commits on the feature branch:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                    feature
+                       │
+                       ▼
+A ──────── B ─────── C ─────── D ─────── E
+                       │
+                      main
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">main</span></code> still points to <code class="docutils literal notranslate"><span class="pre">C</span></code>, while your feature branch contains the new work.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"checkout"</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"feature_division"</span><span class="p">],</span>
+    <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Switched to a new branch 'feature_division'
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add subtraction to the module.</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"math_utils.h"</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"math_utils.c"</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"main.c"</span>
+
+<span class="n">h</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"int multiply(int a, int b);"</span><span class="p">,</span> <span class="s2">"int multiply(int a, int b);</span><span class="se">\n</span><span class="s2">int divide(int a, int b);"</span><span class="p">))</span>
+<span class="n">c</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">int divide(int a, int b)</span><span class="se">\n</span><span class="s2">{</span><span class="se">\n</span><span class="s2">    return a / (b + 1e-12);</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">main</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">main</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+    <span class="s1">'print_result("10 + 7", add(10, 7));'</span><span class="p">,</span>
+    <span class="s1">'print_result("10 + 7", add(10, 7));</span><span class="se">\n</span><span class="s1">    print_result("10 / 7", divide(10, 7));'</span>
+<span class="p">))</span>
+
+<span class="n">run_make</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/main.c
+gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c
+gcc -o calculator main.o math_utils.o string_utils.o
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CompletedProcess(args=['make'], returncode=0, stdout='gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/main.c\ngcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c\ngcc -o calculator main.o math_utils.o string_utils.o\n', stderr='')
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"commit"</span><span class="p">,</span> <span class="s2">"-am"</span><span class="p">,</span> <span class="s2">"Add division operation"</span><span class="p">],</span>
+                        <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[feature_division 3eed68b] Add division operation
+ 3 files changed, 8 insertions(+), 1 deletion(-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Publish the feature branch to the local remote.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"push"</span><span class="p">,</span> <span class="s2">"-u"</span><span class="p">,</span> <span class="s2">"origin"</span><span class="p">,</span> <span class="s2">"feature_division"</span><span class="p">],</span>
+    <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>branch 'feature_division' set up to track 'origin/feature_division'.
+
+To /content/large_scale_remote.git
+ * [new branch]      feature_division -&gt; feature_division
+</pre></div>
+</div>
+</div>
+</div>
+<p>We work on the new branch:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                         feature_division
+                              │
+                              ▼
+A ─────── B ─────── C ─────── D ─────── E
+                     ▲
+                     │
+                    main
+</pre></div>
+</div>
+<p>We can experiment, make mistakes, and add commits without affecting <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
+<section id="merge-it">
+<h2>Merge it<a class="headerlink" href="#merge-it" title="Link to this heading">#</a></h2>
+<p>Once the feature is ready, we can merge the branch back into <code class="docutils literal notranslate"><span class="pre">main</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                       D ─────── E
+                      /           \
+A ─────── B ─────── C               F
+                     \             /
+                       ───────────
+                           main
+</pre></div>
+</div>
+<p>The merge combines the work from the two lines of development.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">command</span> <span class="ow">in</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"checkout"</span><span class="p">,</span> <span class="s2">"main"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"pull"</span><span class="p">,</span> <span class="s2">"origin"</span><span class="p">,</span> <span class="s2">"main"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"checkout"</span><span class="p">,</span> <span class="s2">"feature_division"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"merge"</span><span class="p">,</span> <span class="s2">"main"</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"Merged main"</span><span class="p">],</span>
+<span class="p">]:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"$"</span><span class="p">,</span> <span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">command</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">"Command failed: "</span> <span class="o">+</span> <span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">command</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"log"</span><span class="p">,</span> <span class="s2">"--graph"</span><span class="p">,</span> <span class="s2">"--oneline"</span><span class="p">,</span> <span class="s2">"--all"</span><span class="p">],</span>
+    <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>$ git checkout main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Switched to branch 'main'
+
+$ git pull origin main
+Already up to date.
+
+From /content/large_scale_remote
+ * branch            main       -&gt; FETCH_HEAD
+
+$ git checkout feature_division
+Your branch is up to date with 'origin/feature_division'.
+
+Switched to branch 'feature_division'
+
+$ git merge main -m Merged main
+Already up to date.
+
+
+* 3eed68b Add division operation
+* 4690440  changed main
+* 774f76f Initial calculator project
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"log"</span><span class="p">,</span> <span class="s2">"--oneline"</span><span class="p">,</span> <span class="s2">"--graph"</span><span class="p">,</span> <span class="s2">"--all"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* 3eed68b Add division operation
+* 4690440  changed main
+* 774f76f Initial calculator project
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a-controlled-merge-conflict">
+<h1>7. A controlled merge conflict<a class="headerlink" href="#a-controlled-merge-conflict" title="Link to this heading">#</a></h1>
+<p>Conflicts are easier to understand if we create one intentionally.</p>
+<p>Two branches will make incompatible edits to the same line. Your task is to inspect the conflict and resolve it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create feature_format and commit its formatting change.</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"checkout"</span><span class="p">,</span> <span class="s2">"-b"</span><span class="p">,</span> <span class="s2">"feature_format"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"string_utils.c"</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+    <span class="s1">'printf("</span><span class="si">%s</span><span class="s1"> = </span><span class="si">%d</span><span class="se">\\</span><span class="s1">n", operation, value);'</span><span class="p">,</span>
+    <span class="s1">'printf("[RESULT] </span><span class="si">%s</span><span class="s1"> = </span><span class="si">%d</span><span class="se">\\</span><span class="s1">n", operation, value);'</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"commit"</span><span class="p">,</span> <span class="s2">"-am"</span><span class="p">,</span> <span class="s2">"Add result prefix"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Switch to main and commit a conflicting formatting change.</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"checkout"</span><span class="p">,</span> <span class="s2">"main"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"string_utils.c"</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+    <span class="s1">'printf("</span><span class="si">%s</span><span class="s1"> = </span><span class="si">%d</span><span class="se">\\</span><span class="s1">n", operation, value);'</span><span class="p">,</span>
+    <span class="s1">'printf("RESULT: </span><span class="si">%s</span><span class="s1"> = </span><span class="si">%d</span><span class="se">\\</span><span class="s1">n", operation, value);'</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"commit"</span><span class="p">,</span> <span class="s2">"-am"</span><span class="p">,</span> <span class="s2">"Change result formatting"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Return to feature_format and merge main into it.</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"checkout"</span><span class="p">,</span> <span class="s2">"feature_format"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"merge"</span><span class="p">,</span> <span class="s2">"main"</span><span class="p">],</span>
+    <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Auto-merging src/string_utils.c
+CONFLICT (content): Merge conflict in src/string_utils.c
+Automatic merge failed; fix conflicts and then commit the result.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="resolve-the-conflict">
+<h2>Resolve the conflict<a class="headerlink" href="#resolve-the-conflict" title="Link to this heading">#</a></h2>
+<p>Open <code class="docutils literal notranslate"><span class="pre">src/string_utils.c</span></code>.</p>
+<p>You should see conflict markers:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+...
+=======
+...
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+</pre></div>
+</div>
+<p>Decide which output format you want, remove <strong>all</strong> conflict markers, save the file, compile the project, and then complete the merge.</p>
+<p>This is a good moment to emphasize the workflow:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>conflict → inspect → edit → compile/test → git add → git commit
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conflicted</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"string_utils.c"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conflicted</span><span class="o">.</span><span class="n">read_text</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#include &lt;stdio.h&gt;
+#include "string_utils.h"
+
+void print_result(const char *operation, int value)
+{
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    printf("[RESULT] %s = %d\n", operation, value);
+=======
+    printf("RESULT: %s = %d\n", operation, value);
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; main
+}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="your-turn">
+<h2>Your turn<a class="headerlink" href="#your-turn" title="Link to this heading">#</a></h2>
+<p>Resolve the file manually, then run the following verification cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This cell checks that conflict markers are gone and the project still builds.</span>
+<span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"string_utils.c"</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="k">assert</span> <span class="s2">"&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">text</span> <span class="ow">and</span> <span class="s2">"======="</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">text</span> <span class="ow">and</span> <span class="s2">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">text</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">run_make</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"add"</span><span class="p">,</span> <span class="s2">"src/string_utils.c"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">)</span>
+<span class="n">commit</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"commit"</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"Resolve formatting conflict"</span><span class="p">],</span>
+                        <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/main.c
+gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c
+gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/string_utils.c
+gcc -o calculator main.o math_utils.o string_utils.o
+[feature_format 55ac2af] Resolve formatting conflict
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"git"</span><span class="p">,</span> <span class="s2">"log"</span><span class="p">,</span> <span class="s2">"--oneline"</span><span class="p">,</span> <span class="s2">"--graph"</span><span class="p">,</span> <span class="s2">"--all"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*   55ac2af Resolve formatting conflict
+|\  
+| * f8a15ce Change result formatting
+* | a1b4b3f Add result prefix
+* | 3eed68b Add division operation
+|/  
+* 4690440  changed main
+* 774f76f Initial calculator project
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="testing-make-the-computer-check-your-assumptions">
+<h1>8. Testing: make the computer check your assumptions<a class="headerlink" href="#testing-make-the-computer-check-your-assumptions" title="Link to this heading">#</a></h1>
+<p>Testing is not just a final activity. Tests become valuable when they are:</p>
+<ul class="simple">
+<li><p>cheap to run</p></li>
+<li><p>repeatable</p></li>
+<li><p>specific about expected behavior</p></li>
+<li><p>run frequently</p></li>
+</ul>
+<p>We will start with a tiny Python test harness that executes our compiled C program.</p>
+<p>Then we will add tests for the C functions themselves.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the current program as a black-box test.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="s2">"10 + 7"</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[RESULT] 10 + 7 = 17
+[RESULT] 10 / 7 = 1
+[RESULT] 4 * 5 = 21
+[RESULT] 4 - 5 = 2
+</pre></div>
+</div>
+</div>
+</div>
+<section id="write-a-regression-test">
+<h2>8.1 Write a regression test<a class="headerlink" href="#write-a-regression-test" title="Link to this heading">#</a></h2>
+<p>A regression test protects behavior that already worked.</p>
+<p><strong>Exercise:</strong> add an assertion for subtraction. Then intentionally break <code class="docutils literal notranslate"><span class="pre">subtract()</span></code> and observe the test fail.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">stdout</span>
+<span class="k">assert</span> <span class="s2">"10 + 7 = 17"</span> <span class="ow">in</span> <span class="n">output</span><span class="p">,</span> <span class="s2">"Subtraction regression test failed"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Regression test passed."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Regression test passed.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: edit one implementation line, run the test, then restore the correct implementation.</span>
+
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"make"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="s2">"10 + 7 = 17"</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>make: 'calculator' is up to date.
+[RESULT] 10 + 7 = 17
+[RESULT] 10 / 7 = 1
+[RESULT] 4 * 5 = 21
+[RESULT] 4 - 5 = 2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unit-testing-a-c-module">
+<h2>8.2 Unit testing a C module<a class="headerlink" href="#unit-testing-a-c-module" title="Link to this heading">#</a></h2>
+<p>A unit test should ideally test a small component independently.</p>
+<p>One simple technique in C is to compile a dedicated test executable that links the module being tested with a test <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">test_c</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"test_math_utils.c"</span>
+<span class="n">test_c</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#include &lt;assert.h&gt;</span>
+<span class="s1">#include "src/math_utils.h"</span>
+
+<span class="s1">int main(void)</span>
+<span class="s1">{</span>
+<span class="s1">    assert(add(2, 3) == 5);</span>
+<span class="s1">    assert(add(-2, 2) == 0);</span>
+<span class="s1">    assert(multiply(4, 5) == 20);</span>
+<span class="s1">    assert(subtract(10, 7) == 3);</span>
+<span class="s1">    return 0;</span>
+<span class="s1">}</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">"gcc"</span><span class="p">,</span> <span class="s2">"-ansi"</span><span class="p">,</span> <span class="s2">"-Wall"</span><span class="p">,</span> <span class="s2">"-Wextra"</span><span class="p">,</span> <span class="s2">"-pedantic-errors"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_c</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"math_utils.c"</span><span class="p">),</span>
+     <span class="s2">"-o"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"test_math_utils"</span><span class="p">)],</span>
+    <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="n">test_run</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"test_math_utils"</span><span class="p">)],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"exit code:"</span><span class="p">,</span> <span class="n">test_run</span><span class="o">.</span><span class="n">returncode</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">test_run</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>exit code: 0
+</pre></div>
+</div>
+</div>
+</div>
+<section id="your-turn-add-a-test-that-catches-a-bug">
+<h3>Your turn — add a test that catches a bug<a class="headerlink" href="#your-turn-add-a-test-that-catches-a-bug" title="Link to this heading">#</a></h3>
+<p>Add an assertion for a case that is <strong>not already covered</strong>, such as:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">assert</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Then temporarily introduce a bug in <code class="docutils literal notranslate"><span class="pre">multiply()</span></code> and verify that the test catches it.</p>
+<p><strong>Key idea:</strong> a test is useful only if it can fail when the implementation is wrong.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="regression-testing-and-a-golden-output">
+<h1>9. Regression testing and a golden output<a class="headerlink" href="#regression-testing-and-a-golden-output" title="Link to this heading">#</a></h1>
+<p>Sometimes the easiest specification is an expected output.</p>
+<p>We can save a known-good output as a <strong>golden file</strong>, run the program, and compare the new output against it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"make"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+
+<span class="n">golden</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"expected_output.txt"</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">stdout</span>
+<span class="n">golden</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Golden output:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">golden</span><span class="o">.</span><span class="n">read_text</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/math_utils.c
+gcc -o calculator main.o math_utils.o string_utils.o
+Golden output:
+[RESULT] 10 + 7 = 17
+[RESULT] 10 / 7 = 1
+[RESULT] 4 * 5 = 20
+[RESULT] 4 - 5 = 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">actual</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">stdout</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="n">golden</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">actual</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="s2">"Regression detected: program output changed!"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Golden-output regression test passed."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Golden-output regression test passed.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise-break-the-golden-output">
+<h2>Exercise: Break the golden output<a class="headerlink" href="#exercise-break-the-golden-output" title="Link to this heading">#</a></h2>
+<p>Change one output string in the application. Run the golden comparison and inspect the diff. Then decide whether the test or the application should change.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: change one output string, then run the golden comparison.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"make"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>make: 'calculator' is up to date.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-your-work">
+<h2>Check your work<a class="headerlink" href="#check-your-work" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">actual</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">stdout</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"expected_output.txt"</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"MATCH"</span> <span class="k">if</span> <span class="n">actual</span> <span class="o">==</span> <span class="n">expected</span> <span class="k">else</span> <span class="s2">"DIFFERENT"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">actual</span> <span class="o">!=</span> <span class="n">expected</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">difflib</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">difflib</span><span class="o">.</span><span class="n">unified_diff</span><span class="p">(</span><span class="n">expected</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="kc">True</span><span class="p">),</span> <span class="n">actual</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="kc">True</span><span class="p">),</span> <span class="n">fromfile</span><span class="o">=</span><span class="s2">"expected"</span><span class="p">,</span> <span class="n">tofile</span><span class="o">=</span><span class="s2">"actual"</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MATCH
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="discussion">
+<h2>Discussion<a class="headerlink" href="#discussion" title="Link to this heading">#</a></h2>
+<p>What are the strengths and weaknesses of golden-file tests?</p>
+<ul class="simple">
+<li><p>They are excellent at detecting unexpected output changes.</p></li>
+<li><p>They can become noisy when output intentionally changes.</p></li>
+<li><p>A good regression suite usually combines them with focused unit/integration tests.</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="integration-testing">
+<h1>10. Integration testing<a class="headerlink" href="#integration-testing" title="Link to this heading">#</a></h1>
+<p>Unit tests check components. Integration tests check that components work together.</p>
+<p>Here, the integration boundary is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>main → math_utils → result → string_utils → stdout
+</pre></div>
+</div>
+<p>Our black-box test exercises that whole path.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integration test: exercise the complete executable.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"make"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="s2">"10 + 7"</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+<span class="k">assert</span> <span class="s2">"10 / 7"</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Integration test passed."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>make: 'calculator' is up to date.
+Integration test passed.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise-find-an-integration-bug">
+<h2>Exercise: Find an integration bug<a class="headerlink" href="#exercise-find-an-integration-bug" title="Link to this heading">#</a></h2>
+<p>Break the interaction between two modules without breaking either module’s isolated compilation. Then make the integration test catch it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: introduce a bug at the module boundary, run the integration test, and restore it afterward.</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">"make"</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">WORKDIR</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>make: 'calculator' is up to date.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="performance-testing-measure-before-optimizing">
+<h1>11. Performance testing: measure before optimizing<a class="headerlink" href="#performance-testing-measure-before-optimizing" title="Link to this heading">#</a></h1>
+<p>Performance testing asks a quantitative question.</p>
+<p>Instead of saying “this feels slow”, measure elapsed time. For a tiny program the numbers are not interesting, but the workflow is.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">DEVNULL</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"100 executions: </span><span class="si">{</span><span class="n">elapsed</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> seconds"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Average: </span><span class="si">{</span><span class="n">elapsed</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> seconds"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100 executions: 0.0870 seconds
+Average: 0.000870 seconds
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise-measure-variability">
+<h2>Exercise: Measure variability<a class="headerlink" href="#exercise-measure-variability" title="Link to this heading">#</a></h2>
+<p>Run the performance measurement 5 times. Calculate the minimum, maximum, and mean runtime. Why is one measurement insufficient?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+<span class="n">times</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">DEVNULL</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">times</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"times:"</span><span class="p">,</span> <span class="n">times</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"min:"</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">times</span><span class="p">),</span> <span class="s2">"max:"</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">times</span><span class="p">),</span> <span class="s2">"mean:"</span><span class="p">,</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">times</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>times: [0.0011102939988631988, 0.0009095219993469073, 0.0008427669999946374, 0.000832812000226113, 0.0008134740000969032]
+min: 0.0008134740000969032 max: 0.0011102939988631988 mean: 0.0009017737997055519
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h2>
+<p>Modify the program so that it performs substantially more work, then measure again.</p>
+<p>The point is not to win a benchmark; it is to practice:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hypothesis → measurement → change → measurement
+</pre></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="logging">
+<h1>12. Logging<a class="headerlink" href="#logging" title="Link to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">printf()</span></code> is useful for user-facing output. Logging is useful for understanding what a program is doing while it runs.</p>
+<p>Typical levels include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> — detailed diagnostic information;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">INFO</span></code> — normal operational events;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WARNING</span></code> — something unexpected but recoverable;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ERROR</span></code> — an operation failed;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code> — severe failure.</p></li>
+</ul>
+<p>Let’s first use Python’s logging module to see the idea.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">"lecture"</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">logger</span><span class="o">.</span><span class="n">handlers</span><span class="p">:</span>
+    <span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+    <span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s2">"</span><span class="si">%(levelname)s</span><span class="s2">: </span><span class="si">%(message)s</span><span class="s2">"</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">"Detailed state"</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Program started"</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">"Input is unusual"</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">"An operation failed"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DEBUG: Detailed state
+DEBUG:lecture:Detailed state
+INFO: Program started
+INFO:lecture:Program started
+WARNING: Input is unusual
+WARNING:lecture:Input is unusual
+ERROR: An operation failed
+ERROR:lecture:An operation failed
+</pre></div>
+</div>
+</div>
+</div>
+<section id="your-turn-choose-the-right-level">
+<h2>Your turn — choose the right level<a class="headerlink" href="#your-turn-choose-the-right-level" title="Link to this heading">#</a></h2>
+<p>For each event, choose <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">WARNING</span></code>, or <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>:</p>
+<ol class="arabic simple">
+<li><p>“Loaded configuration file.”</p></li>
+<li><p>“User entered an invalid value, so we ask again.”</p></li>
+<li><p>“Could not open the database.”</p></li>
+<li><p>“Current cache size is 3812 entries.”</p></li>
+</ol>
+<p>There is not always one perfect answer; the important question is <strong>what should an operator do with the message?</strong></p>
+</section>
+<section id="add-logging-to-the-c-program">
+<h2>12.1 Add logging to the C program<a class="headerlink" href="#add-logging-to-the-c-program" title="Link to this heading">#</a></h2>
+<p>C does not have a standard logging framework comparable to Python’s <code class="docutils literal notranslate"><span class="pre">logging</span></code>, but a project can define a small logging interface.</p>
+<p>We will add a minimal logger that writes levels and messages to <code class="docutils literal notranslate"><span class="pre">stderr</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"logger.h"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#ifndef LOGGER_H</span>
+<span class="s1">#define LOGGER_H</span>
+
+<span class="s1">void log_info(const char *message);</span>
+<span class="s1">void log_warning(const char *message);</span>
+<span class="s1">void log_error(const char *message);</span>
+
+<span class="s1">#endif</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"logger.c"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">r</span><span class="s1">'''</span>
+<span class="s1">#include &lt;stdio.h&gt;</span>
+<span class="s1">#include "logger.h"</span>
+
+<span class="s1">void log_info(const char *message)</span>
+<span class="s1">{</span>
+<span class="s1">    fprintf(stderr, "INFO: </span><span class="si">%s</span><span class="s1">\n", message);</span>
+<span class="s1">}</span>
+
+<span class="s1">void log_warning(const char *message)</span>
+<span class="s1">{</span>
+<span class="s1">    fprintf(stderr, "WARNING: </span><span class="si">%s</span><span class="s1">\n", message);</span>
+<span class="s1">}</span>
+
+<span class="s1">void log_error(const char *message)</span>
+<span class="s1">{</span>
+<span class="s1">    fprintf(stderr, "ERROR: </span><span class="si">%s</span><span class="s1">\n", message);</span>
+<span class="s1">}</span>
+<span class="s1">'''</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+
+<span class="c1"># Add a simple startup log to main.c.</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"src"</span> <span class="o">/</span> <span class="s2">"main.c"</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'#include "math_utils.h"'</span><span class="p">,</span> <span class="s1">'#include "math_utils.h"</span><span class="se">\n</span><span class="s1">#include "logger.h"'</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'int main(void)</span><span class="se">\n</span><span class="s1">{'</span><span class="p">,</span> <span class="s1">'int main(void)</span><span class="se">\n</span><span class="s1">{</span><span class="se">\n</span><span class="s1">    log_info("calculator started");'</span><span class="p">)</span>
+<span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># Add logger.o to the automatic Makefile.</span>
+<span class="n">make_text</span> <span class="o">=</span> <span class="n">makefile</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="n">make_text</span> <span class="o">=</span> <span class="n">make_text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+    <span class="s2">"OBJECTS = main.o math_utils.o string_utils.o"</span><span class="p">,</span>
+    <span class="s2">"OBJECTS = main.o math_utils.o string_utils.o logger.o"</span>
+<span class="p">)</span>
+<span class="n">make_text</span> <span class="o">=</span> <span class="n">make_text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+    <span class="s2">"clean:"</span><span class="p">,</span>
+    <span class="s2">"logger.o: src/logger.c src/logger.h</span><span class="se">\n\t</span><span class="s2">$(CC) $(CFLAGS) -c src/logger.c</span><span class="se">\n\n</span><span class="s2">clean:"</span>
+<span class="p">)</span>
+<span class="n">makefile</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">make_text</span><span class="p">)</span>
+
+<span class="n">run_make</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/main.c
+gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/logger.c
+gcc -o calculator main.o math_utils.o string_utils.o logger.o
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CompletedProcess(args=['make'], returncode=0, stdout='gcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/main.c\ngcc -ansi -Wall -Wextra -Werror -pedantic-errors -c src/logger.c\ngcc -o calculator main.o math_utils.o string_utils.o logger.o\n', stderr='')
+</pre></div>
+</div>
+</div>
+</div>
+<section id="observe-stdout-vs-stderr">
+<h3>Observe stdout vs stderr<a class="headerlink" href="#observe-stdout-vs-stderr" title="Link to this heading">#</a></h3>
+<p>Run the program while capturing the two streams separately.</p>
+<p>Why is logging often sent to <code class="docutils literal notranslate"><span class="pre">stderr</span></code> rather than mixed with the program’s normal output?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">WORKDIR</span> <span class="o">/</span> <span class="s2">"calculator"</span><span class="p">)],</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"STDOUT:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"STDERR:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STDOUT:
+[RESULT] 10 + 7 = 17
+[RESULT] 10 / 7 = 1
+[RESULT] 4 * 5 = 20
+[RESULT] 4 - 5 = 2
+
+STDERR:
+INFO: calculator started
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ci-cd-from-code-to-release">
+<h1>13. CI/CD: From Code to Release<a class="headerlink" href="#ci-cd-from-code-to-release" title="Link to this heading">#</a></h1>
+<p><img alt="" src="https://www.testingdocs.com/wp-content/uploads/CiCD-pipeline.png" /></p>
+<p>Imagine you change one line of code. How do you know you haven’t broken something else? And how does that change reach users?</p>
+<p><strong>CI/CD automates the journey from a code change to a release.</strong></p>
+<section id="three-stages">
+<h2>Three stages<a class="headerlink" href="#three-stages" title="Link to this heading">#</a></h2>
+<section id="continuous-integration-ci-does-it-work">
+<h3>1. Continuous Integration (CI) — Does it work?<a class="headerlink" href="#continuous-integration-ci-does-it-work" title="Link to this heading">#</a></h3>
+<p>Every proposed change triggers a build and automated tests. Failures are caught early.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Code change → Build → Tests → Pass / Fail
+</pre></div>
+</div>
+</section>
+<section id="continuous-delivery-is-it-ready-to-release">
+<h3>2. Continuous Delivery — Is it ready to release?<a class="headerlink" href="#continuous-delivery-is-it-ready-to-release" title="Link to this heading">#</a></h3>
+<p>Every change that passes CI is prepared for release. The software can be released at any time, but a person must approve the deployment.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>CI passes → Release-ready → Manual approval → Deploy
+</pre></div>
+</div>
+</section>
+<section id="continuous-deployment-release-it-automatically">
+<h3>3. Continuous Deployment — Release it automatically!<a class="headerlink" href="#continuous-deployment-release-it-automatically" title="Link to this heading">#</a></h3>
+<p>Every change that passes all required checks is automatically deployed to production, without manual release approval.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>CI passes → Release-ready → Automatic deployment
+</pre></div>
+</div>
+<p><strong>The key difference:</strong> Continuous <em>delivery</em> keeps software ready to release; continuous <em>deployment</em> automatically releases it to production.</p>
+</section>
+</section>
+<section id="example-a-ci-pipeline-for-a-c-project">
+<h2>Example: A CI pipeline for a C project<a class="headerlink" href="#example-a-ci-pipeline-for-a-c-project" title="Link to this heading">#</a></h2>
+<p>Suppose you change <code class="docutils literal notranslate"><span class="pre">pagerank.c</span></code>. Before accepting the change, the pipeline checks that the project still builds and works correctly.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Code change
+     |
+     v
+Clean artifacts
+     |
+     v
+Build (make)
+     |
+     v
+Run unit tests
+     |
+     v
+Run integration tests
+     |
+     v
+  All pass?
+   /     \
+ Yes      No
+  |        |
+  v        v
+CI passes  CI fails
+  |
+  v
+Ready for release
+</pre></div>
+</div>
+<p>A simplified pipeline might run these commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>clean
+make
+make<span class="w"> </span><span class="nb">test</span>
+python<span class="w"> </span>test_integration.py
+</pre></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="project-lifecycle-put-the-tools-together">
+<h1>14. Project lifecycle: put the tools together<a class="headerlink" href="#project-lifecycle-put-the-tools-together" title="Link to this heading">#</a></h1>
+<p>A large-scale project is not “write code, then submit it”.</p>
+<p>A simplified lifecycle is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>requirements
+    ↓
+design
+    ↓
+implementation
+    ↓
+build
+    ↓
+test
+    ↓
+review / integration
+    ↓
+release
+    ↓
+monitor / maintain
+    ↺
+</pre></div>
+</div>
+<p>The tools we practiced support different parts:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Need</p></th>
+<th class="head"><p>Tool / practice</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Modular implementation</p></td>
+<td><p>C modules + headers</p></td>
+</tr>
+<tr class="row-odd"><td><p>Repeatable builds</p></td>
+<td><p>Make</p></td>
+</tr>
+<tr class="row-even"><td><p>Change history</p></td>
+<td><p>Git</p></td>
+</tr>
+<tr class="row-odd"><td><p>Isolated feature work</p></td>
+<td><p>Branches</p></td>
+</tr>
+<tr class="row-even"><td><p>Collaboration</p></td>
+<td><p>Merge / pull request</p></td>
+</tr>
+<tr class="row-odd"><td><p>Correctness</p></td>
+<td><p>Unit + integration + regression tests</p></td>
+</tr>
+<tr class="row-even"><td><p>Reliability</p></td>
+<td><p>CI</p></td>
+</tr>
+<tr class="row-odd"><td><p>Diagnosis</p></td>
+<td><p>Logging</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="exercise-choose-the-right-tool">
+<h2>Exercise: Choose the right tool<a class="headerlink" href="#exercise-choose-the-right-tool" title="Link to this heading">#</a></h2>
+<p>For each scenario, choose the most relevant tool: Make, Git, unit tests, integration tests, logging, or CI.</p>
+<ol class="arabic simple">
+<li><p>“Only the affected <code class="docutils literal notranslate"><span class="pre">.o</span></code> files should rebuild.”</p></li>
+<li><p>“I need to see what changed between two versions.”</p></li>
+<li><p>“A helper function returns the wrong value.”</p></li>
+<li><p>“Two modules work alone but fail together.”</p></li>
+<li><p>“The program behaves incorrectly on a server and I need evidence of what happened.”</p></li>
+<li><p>“Every pushed change should be built and tested.”</p></li>
+</ol>
+</section>
+<section id="id1">
+<h2>Check your work<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Expected: 1 Make, 2 Git, 3 unit test, 4 integration test, 5 logging, 6 CI."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="connecting-to-a-real-remote-repository">
+<h1>15. Connecting to a real remote repository<a class="headerlink" href="#connecting-to-a-real-remote-repository" title="Link to this heading">#</a></h1>
+<p>Today, <code class="docutils literal notranslate"><span class="pre">origin</span></code> points to a <strong>local bare repository</strong> so that <code class="docutils literal notranslate"><span class="pre">push</span></code> and <code class="docutils literal notranslate"><span class="pre">pull</span></code> work without authentication. To connect a project to a real remote such as GitHub, create a repository on the hosting service, then configure its URL.</p>
+<p>For an existing local repository, use the HTTPS URL shown by GitHub:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/USERNAME/REPOSITORY.git
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">origin</span></code> already exists, update it instead:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>https://github.com/USERNAME/REPOSITORY.git
+</pre></div>
+</div>
+<p>Useful checks:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>-v
+git<span class="w"> </span>branch<span class="w"> </span>-vv
+</pre></div>
+</div>
+<p><strong>Authentication note:</strong> setting a remote URL does not grant permission to push. GitHub requires authentication (for example, via Git Credential Manager, GitHub CLI, or a personal access token). In Colab, Git cannot reliably prompt for credentials inside a notebook output cell, so complete authentication separately before pushing. Never put a personal access token directly in a shared notebook.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="scikit_learn.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Machine Learning</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="weeks/12-databases.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Databases</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Large-Scale Projects</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-with-one-c-file">1. Start with one C file</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#c-modules-split-the-program">2. C modules: split the program</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compile-link-see-the-intermediate-files">2.1 Compile → link: see the intermediate files</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-what-actually-needs-rebuilding">3. Dependencies: what actually needs rebuilding?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#make-let-the-computer-manage-the-dependency-graph">4. Make: let the computer manage the dependency graph</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-makefile">What is a Makefile?</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observe-incremental-compilation">Observe incremental compilation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-makefile-detective">Exercise: Makefile detective</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn-change-only-one-implementation">Your turn — change only one implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn-change-a-header">Your turn — change a header</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-common-makefile-mistake">A common Makefile mistake</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#git-and-branches">5. Git and Branches</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-git">What is Git?</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-basic-git-workflow">The basic Git workflow</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-a-local-remote-repository">Configure a local remote repository</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-commit">First commit</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-diff-is-your-microscope">5.1 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> is your microscope</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-history-with">Inspect the history with:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#branches-work-on-a-feature-without-disturbing-main">6. Branches: work on a feature without disturbing <code class="docutils literal notranslate"><span class="pre">main</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merge-it">Merge it</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-controlled-merge-conflict">7. A controlled merge conflict</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolve-the-conflict">Resolve the conflict</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn">Your turn</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-make-the-computer-check-your-assumptions">8. Testing: make the computer check your assumptions</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-regression-test">8.1 Write a regression test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-testing-a-c-module">8.2 Unit testing a C module</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn-add-a-test-that-catches-a-bug">Your turn — add a test that catches a bug</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-testing-and-a-golden-output">9. Regression testing and a golden output</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-break-the-golden-output">Exercise: Break the golden output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-work">Check your work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-testing">10. Integration testing</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-find-an-integration-bug">Exercise: Find an integration bug</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-testing-measure-before-optimizing">11. Performance testing: measure before optimizing</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-measure-variability">Exercise: Measure variability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logging">12. Logging</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn-choose-the-right-level">Your turn — choose the right level</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-logging-to-the-c-program">12.1 Add logging to the C program</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observe-stdout-vs-stderr">Observe stdout vs stderr</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ci-cd-from-code-to-release">13. CI/CD: From Code to Release</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#three-stages">Three stages</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration-ci-does-it-work">1. Continuous Integration (CI) — Does it work?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-delivery-is-it-ready-to-release">2. Continuous Delivery — Is it ready to release?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-deployment-release-it-automatically">3. Continuous Deployment — Release it automatically!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-a-ci-pipeline-for-a-c-project">Example: A CI pipeline for a C project</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-lifecycle-put-the-tools-together">14. Project lifecycle: put the tools together</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-choose-the-right-tool">Exercise: Choose the right tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your work</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-a-real-remote-repository">15. Connecting to a real remote repository</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yael Kupershmidt, Rami Nasser
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  By Yael Kupershmidt, Rami Nasser, School of Computer Science and AI,
+Tel Aviv University, Tel Aviv 6997801, Israel.
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
