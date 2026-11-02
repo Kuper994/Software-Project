@@ -18,7 +18,7 @@ html:
   use_repository_button: true
   use_download_button: true
   use_fullscreen_button: true
-  home_page_in_navbar: false
+  home_page_in_navbar: true
   baseurl: https://kuper994.github.io/Software-Project
   extra_footer: |
     By Rami Nasser, School of Computer Science and AI, Tel Aviv University,
@@ -41,5 +41,5 @@ sphinx:
       - _build/**
     html_theme_options:
       show_toc_level: 2
-      show_navbar_depth: 2
-      max_navbar_depth: 2
+      show_navbar_depth: 1
+      max_navbar_depth: 1

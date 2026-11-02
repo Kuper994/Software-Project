@@ -3,80 +3,47 @@ root: intro
 chapters:
 - file: admin
   title: Admin
-- file: weeks/01-devenv
-  title: DevEnv + Docker
-  sections:
-  - file: Development_Environment
-    title: Development Environment
-  - file: Python_review
-    title: Python Review
+- file: Development_Environment
+  title: Development Environment
+- file: Python_review
+  title: Python Review
 - file: weeks/03-project
   title: Project
-- file: weeks/04-c-basics-w3
-  title: C basics
-  sections:
-  - file: Introduction_to_C
-    title: Introduction to C
-  - file: functions
-    title: Functions
-- file: weeks/05-c-basics-w4
-  title: C basics
-  sections:
-  - file: arrays_pointers
-    title: Arrays + Pointers
-  - file: strings
-    title: Strings
-- file: weeks/06-c-basics-w5
-  title: C basics
-  sections:
-  - file: dynamicMemory
-    title: Dynamic memory allocation
-  - file: structures
-    title: Structures
-- file: weeks/07-c-basics-w6
-  title: C basics
-  sections:
-  - file: linkedLists
-    title: Linked Lists
-  - file: preprocessor
-    title: The Preprocessor
-- file: weeks/08-c-basics-w7
-  title: C basics
-  sections:
-  - file: Files
-    title: Files
-  - file: Bitwise_Operators
-    title: Bitwise Operators
-- file: weeks/09-cpython
-  title: C-Python + data science
-  sections:
-  - file: C_Python_API
-    title: C Python API
-  - file: numpy
-    title: Numpy
-- file: weeks/10-python-ds
-  title: Python data science
-  sections:
-  - file: pandas
-    title: Pandas
-  - file: scikit_learn
-    title: Machine Learning
-- file: weeks/11-large-scale
-  title: Large scale computing
-  sections:
-  - file: large_scale
-    title: Large Scale
+- file: Introduction_to_C
+  title: Intro to C
+- file: functions
+  title: Functions
+- file: arrays_pointers
+  title: Arrays + Pointers
+- file: strings
+  title: Strings
+- file: dynamicMemory
+  title: Dynamic memory allocation
+- file: structures
+  title: Structures
+- file: linkedLists
+  title: Linked Lists
+- file: preprocessor
+  title: The Preprocessor
+- file: Files
+  title: Files
+- file: Bitwise_Operators
+  title: Bitwise Operators
+- file: C_Python_API
+  title: C Python API
+- file: numpy
+  title: Numpy
+- file: pandas
+  title: Pandas
+- file: scikit_learn
+  title: Machine Learning
+- file: large_scale
+  title: Large Scale
 - file: weeks/12-databases
   title: Databases
-- file: weeks/13-parallel
-  title: Parallel / distributed
-  sections:
-  - file: parallel-programming
-    title: Parallel Programming
-- file: weeks/14-c-tutorial
+- file: parallel-programming
+  title: Parallel Programming
+- file: C_tutorial
   title: C Tutorial
-  sections:
-  - file: C_tutorial
-    title: C Tutorial
-  - file: c_exam
-    title: C Exam Questions
+- file: c_exam
+  title: C Exam Questions
