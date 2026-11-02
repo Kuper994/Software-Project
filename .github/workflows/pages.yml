@@ -2,7 +2,7 @@ name: Build GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [course-site]
   workflow_dispatch:
 
 permissions:
